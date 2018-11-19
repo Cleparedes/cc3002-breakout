@@ -3,7 +3,6 @@ package logic.level;
 import java.util.*;
 
 import controller.Game;
-import controller.NumberOfBricks;
 import logic.brick.Brick;
 import logic.brick.GlassBrick;
 import logic.brick.MetalBrick;
@@ -34,6 +33,10 @@ public class LevelClass extends Observable implements Level, Observer {
         nextLevel = null;
         playable = true;
         this.numberOfBricks = numberOfBricks;
+    }
+
+    public LevelClass(){
+        this(null, Integer.MAX_VALUE, 0.0, 0.0, 0);
     }
 
     @Override
@@ -92,12 +95,14 @@ public class LevelClass extends Observable implements Level, Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        if(arg instanceof Brick)
-            ((Brick) arg).accept(this);
-    }
-
-    public void accept(NumberOfBricks nob){
-        nob.publish(this.getNumberOfBricks())
+        if(arg instanceof Brick){
+            numberOfBricks--;
+            if(((Brick) arg).isMetal())
+                notifyObservers(arg);
+            if(numberOfBricks == 0){
+                notifyObservers(this);
+            }
+        }
     }
 
     public void subscribe(Observer game){

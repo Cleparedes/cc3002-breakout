@@ -1,6 +1,8 @@
 package logic.brick;
 
+
 import java.util.Observable;
+import java.util.Observer;
 
 /**
  * Represents a general state of a brick determined by {@Link Brick}.
@@ -26,18 +28,13 @@ public abstract class AbstractBrick extends Observable implements Brick {
             hp--;
         if(this.isDestroyed()){
             setChanged();
-            notifyObservers();
+            notifyObservers(this);
         }
     }
 
     @Override
     public boolean isDestroyed() {
         return hp <= 0;
-    }
-
-    @Override
-    public int getScore() {
-        return pts;
     }
 
     @Override
