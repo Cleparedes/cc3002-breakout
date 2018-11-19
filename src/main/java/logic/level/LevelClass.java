@@ -16,27 +16,30 @@ public class LevelClass extends Observable implements Level, Observer {
     private boolean playable;
     private int numberOfBricks;
 
-    public LevelClass(String name, int numberOfBricks, double probOfGlass, double probOfMetal, int seed){
+    public LevelClass(String name, int numberOfBricks, double probOfGlass, double probOfMetal, int seed, boolean isPlayable){
         this.name = name;
+        this.numberOfBricks = numberOfBricks;
         Random generator = new Random(seed);
-        int numberOfGlass = numberOfBricks*(int) (probOfGlass*generator.nextDouble());
-        int numberOfMetal = numberOfBricks*(int) (probOfMetal*generator.nextDouble()) + numberOfGlass;
         List<Brick> bricks = new ArrayList<>();
-        int i = 0;
-        for(; i<numberOfGlass; i++)
-            bricks.add(new GlassBrick());
-        for(i=numberOfGlass; i<numberOfMetal; i++)
-            bricks.add(new MetalBrick());
-        for(i=numberOfMetal; i<numberOfBricks; i++)
-            bricks.add(new WoodenBrick());
+        for(int i=0; i<numberOfBricks; i++){
+            if(generator.nextDouble() < probOfGlass)
+                bricks.add(new GlassBrick());
+            else
+                bricks.add(new WoodenBrick());
+        }
+        for(int i=0; i<numberOfBricks; i++){
+            if(generator.nextDouble() < probOfMetal) {
+                bricks.add(new MetalBrick());
+                this.numberOfBricks++;
+            }
+        }
         this.bricks = bricks;
         nextLevel = null;
-        playable = true;
-        this.numberOfBricks = numberOfBricks;
+        playable = isPlayable;
     }
 
     public LevelClass(){
-        this(null, Integer.MAX_VALUE, 0.0, 0.0, 0);
+        this("", 0, 0.0, 0.0, 0, false);
     }
 
     @Override
@@ -56,6 +59,8 @@ public class LevelClass extends Observable implements Level, Observer {
 
     @Override
     public Level getNextLevel() {
+        if(!playable)
+            return this;
         return nextLevel;
     }
 
