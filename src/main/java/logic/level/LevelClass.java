@@ -1,19 +1,39 @@
 package logic.level;
 
+import java.util.*;
+
+import controller.Game;
+import controller.NumberOfBricks;
 import logic.brick.Brick;
+import logic.brick.GlassBrick;
+import logic.brick.MetalBrick;
+import logic.brick.WoodenBrick;
 
-import java.util.List;
+public class LevelClass extends Observable implements Level, Observer {
 
-public class LevelClass implements Level {
-
-    private final String name;
-    private int numberOfBricks;
+    private String name;
     private List<Brick> bricks;
-    private LevelClass nextLevel;
+    private Level nextLevel;
     private boolean playable;
+    private int numberOfBricks;
 
-    LevelClass(final String name){
+    public LevelClass(String name, int numberOfBricks, double probOfGlass, double probOfMetal, int seed){
         this.name = name;
+        Random generator = new Random(seed);
+        int numberOfGlass = numberOfBricks*(int) (probOfGlass*generator.nextDouble());
+        int numberOfMetal = numberOfBricks*(int) (probOfMetal*generator.nextDouble()) + numberOfGlass;
+        List<Brick> bricks = new ArrayList<>();
+        int i = 0;
+        for(; i<numberOfGlass; i++)
+            bricks.add(new GlassBrick());
+        for(i=numberOfGlass; i<numberOfMetal; i++)
+            bricks.add(new MetalBrick());
+        for(i=numberOfMetal; i<numberOfBricks; i++)
+            bricks.add(new WoodenBrick());
+        this.bricks = bricks;
+        nextLevel = null;
+        playable = true;
+        this.numberOfBricks = numberOfBricks;
     }
 
     @Override
@@ -38,15 +58,14 @@ public class LevelClass implements Level {
 
     @Override
     public boolean isPlayableLevel() {
-        if(hasNextLevel()){
-            return nextLevel.playable;
-        }
-        return false;
+        return playable;
     }
 
     @Override
     public boolean hasNextLevel() {
-        return nextLevel != null;
+        if(nextLevel != null)
+            return nextLevel.isPlayableLevel();
+        return false;
     }
 
     @Override
@@ -59,11 +78,29 @@ public class LevelClass implements Level {
 
     @Override
     public Level addPlayingLevel(Level level) {
-        return null;
+        if(nextLevel == null)
+            nextLevel = level;
+        else
+            nextLevel.addPlayingLevel(level);
+        return this;
     }
 
     @Override
     public void setNextLevel(Level level) {
+        nextLevel = level;
+    }
 
+    @Override
+    public void update(Observable o, Object arg) {
+        if(arg instanceof Brick)
+            ((Brick) arg).accept(this);
+    }
+
+    public void accept(NumberOfBricks nob){
+        nob.publish(this.getNumberOfBricks())
+    }
+
+    public void subscribe(Observer game){
+        addObserver(game);
     }
 }

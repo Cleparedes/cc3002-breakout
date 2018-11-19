@@ -10,17 +10,14 @@ import java.util.Observable;
 public abstract class AbstractBrick extends Observable implements Brick {
 
     private int hp;
-    private final int pts;
 
     /**
      * Constructor for a general Brick
      *
      * @param hp    the remaining hit points of the brick.
-     * @param pts   the points received after breaking the brick.
      */
-    protected AbstractBrick(int hp, final int pts){
+    protected AbstractBrick(int hp){
         this.hp = hp;
-        this.pts = pts;
     }
 
     @Override
