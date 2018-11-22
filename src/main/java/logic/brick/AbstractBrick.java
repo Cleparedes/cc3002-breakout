@@ -24,9 +24,8 @@ public abstract class AbstractBrick extends Observable implements Brick {
 
     @Override
     public void hit(){
-        if(!this.isDestroyed())
-            hp--;
-        if(this.isDestroyed()){
+        hp--;
+        if(hp == 0){
             setChanged();
             notifyObservers(this);
         }
@@ -34,13 +33,16 @@ public abstract class AbstractBrick extends Observable implements Brick {
 
     @Override
     public boolean isDestroyed() {
-        return hp <= 0;
+        return false;
     }
 
     @Override
     public int remainingHits() {
-        if(hp < 0)
-            hp = 0;
         return hp;
+    }
+
+    @Override
+    public void subscribe(Observer level){
+        addObserver(level);
     }
 }

@@ -2,21 +2,18 @@ package logic.level;
 
 import java.util.*;
 
-import controller.Game;
-import logic.brick.Brick;
-import logic.brick.GlassBrick;
-import logic.brick.MetalBrick;
-import logic.brick.WoodenBrick;
+import logic.brick.*;
+import logic.visitor.AbstractVisitor;
 
-public class LevelClass extends Observable implements Level, Observer {
+public class PlayableLevel extends Observable implements Level, Observer {
 
     private String name;
     private List<Brick> bricks;
     private Level nextLevel;
-    private boolean playable;
     private int numberOfBricks;
+    private int numberOfMetalBricks;
 
-    public LevelClass(String name, int numberOfBricks, double probOfGlass, double probOfMetal, int seed, boolean isPlayable){
+    public PlayableLevel(String name, int numberOfBricks, double probOfGlass, double probOfMetal, int seed){
         this.name = name;
         this.numberOfBricks = numberOfBricks;
         Random generator = new Random(seed);
@@ -30,16 +27,14 @@ public class LevelClass extends Observable implements Level, Observer {
         for(int i=0; i<numberOfBricks; i++){
             if(generator.nextDouble() < probOfMetal) {
                 bricks.add(new MetalBrick());
-                this.numberOfBricks++;
+                this.numberOfMetalBricks++;
             }
         }
+        bricks.forEach(brick -> {
+            brick.subscribe(this);
+        });
         this.bricks = bricks;
         nextLevel = null;
-        playable = isPlayable;
-    }
-
-    public LevelClass(){
-        this("", 0, 0.0, 0.0, 0, false);
     }
 
     @Override
@@ -49,7 +44,7 @@ public class LevelClass extends Observable implements Level, Observer {
 
     @Override
     public int getNumberOfBricks() {
-        return numberOfBricks;
+        return numberOfBricks + numberOfMetalBricks;
     }
 
     @Override
@@ -59,21 +54,17 @@ public class LevelClass extends Observable implements Level, Observer {
 
     @Override
     public Level getNextLevel() {
-        if(!playable)
-            return this;
         return nextLevel;
     }
 
     @Override
     public boolean isPlayableLevel() {
-        return playable;
+        return true;
     }
 
     @Override
     public boolean hasNextLevel() {
-        if(nextLevel != null)
-            return nextLevel.isPlayableLevel();
-        return false;
+        return nextLevel != null;
     }
 
     @Override
@@ -101,10 +92,17 @@ public class LevelClass extends Observable implements Level, Observer {
     @Override
     public void update(Observable o, Object arg) {
         if(arg instanceof Brick){
-            numberOfBricks--;
-            if(((Brick) arg).isMetal())
-                notifyObservers(arg);
+            if(((Brick) arg).isMetal()) {
+                numberOfMetalBricks--;
+            }
+            else
+                numberOfBricks--;
+            setChanged();
+            notifyObservers(arg);
+            int index = bricks.indexOf(arg);
+            bricks.set(index, new NullBrick());
             if(numberOfBricks == 0){
+                setChanged();
                 notifyObservers(this);
             }
         }
@@ -112,5 +110,10 @@ public class LevelClass extends Observable implements Level, Observer {
 
     public void subscribe(Observer game){
         addObserver(game);
+    }
+
+    @Override
+    public void accept(AbstractVisitor visitor) {
+        visitor.visitPlayableLevel(this);
     }
 }
