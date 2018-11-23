@@ -1,9 +1,7 @@
 package logic.level;
 
-import controller.Game;
-import logic.brick.AbstractBrick;
 import logic.brick.Brick;
-import logic.visitor.AbstractVisitor;
+import logic.visitor.Visitor;
 
 import java.util.List;
 import java.util.Observer;
@@ -84,5 +82,10 @@ public interface Level {
      */
     void subscribe(Observer game);
 
-    void accept(AbstractVisitor visitor);
+    /**
+     * Allows a {@Link Visitor} to perform an action over the Level.
+     *
+     * @param visitor   a subclass of {@Link Visitor} with a designated action
+     */
+    void accept(Visitor visitor);
 }

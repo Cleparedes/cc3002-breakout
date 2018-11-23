@@ -1,13 +1,27 @@
 package logic.level;
 
 import logic.brick.Brick;
-import logic.visitor.AbstractVisitor;
+import logic.visitor.Visitor;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Observer;
 
 public class NullLevel implements Level{
+
+    private boolean isFinal;
+
+    public NullLevel(boolean isFinal){
+        this.isFinal = isFinal;
+    }
+
+    public NullLevel(){
+        this(false);
+    }
+
+    public boolean isFinal(){
+        return isFinal;
+    }
 
     @Override
     public String getName() {
@@ -46,7 +60,8 @@ public class NullLevel implements Level{
 
     @Override
     public Level addPlayingLevel(Level level) {
-        return null;
+        level.setNextLevel(new NullLevel(true));
+        return level;
     }
 
     @Override
@@ -60,7 +75,7 @@ public class NullLevel implements Level{
     }
 
     @Override
-    public void accept(AbstractVisitor visitor) {
+    public void accept(Visitor visitor) {
         visitor.visitNullLevel(this);
     }
 }

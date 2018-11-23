@@ -3,7 +3,9 @@ package logic.level;
 import java.util.*;
 
 import logic.brick.*;
-import logic.visitor.AbstractVisitor;
+import logic.visitor.GetsDestroyed;
+import logic.visitor.Visitor;
+import logic.visitor.IsPlayable;
 
 public class PlayableLevel extends Observable implements Level, Observer {
 
@@ -34,7 +36,7 @@ public class PlayableLevel extends Observable implements Level, Observer {
             brick.subscribe(this);
         });
         this.bricks = bricks;
-        nextLevel = null;
+        nextLevel = new NullLevel();
     }
 
     @Override
@@ -64,7 +66,9 @@ public class PlayableLevel extends Observable implements Level, Observer {
 
     @Override
     public boolean hasNextLevel() {
-        return nextLevel != null;
+        IsPlayable ip = new IsPlayable();
+        nextLevel.accept(ip);
+        return ip.getValue();
     }
 
     @Override
@@ -77,10 +81,7 @@ public class PlayableLevel extends Observable implements Level, Observer {
 
     @Override
     public Level addPlayingLevel(Level level) {
-        if(nextLevel == null)
-            nextLevel = level;
-        else
-            nextLevel.addPlayingLevel(level);
+        nextLevel = nextLevel.addPlayingLevel(level);
         return this;
     }
 
@@ -89,22 +90,27 @@ public class PlayableLevel extends Observable implements Level, Observer {
         nextLevel = level;
     }
 
+
     @Override
     public void update(Observable o, Object arg) {
-        if(arg instanceof Brick){
-            if(((Brick) arg).isMetal()) {
-                numberOfMetalBricks--;
-            }
-            else
-                numberOfBricks--;
+        Brick brick = (Brick) o;
+        GetsDestroyed gd = new GetsDestroyed();
+        brick.accept(gd);
+        if(gd.isMetal()) {
+            numberOfMetalBricks--;
             setChanged();
-            notifyObservers(arg);
-            int index = bricks.indexOf(arg);
-            bricks.set(index, new NullBrick());
-            if(numberOfBricks == 0){
-                setChanged();
-                notifyObservers(this);
-            }
+            notifyObservers(0);
+        }
+        else{
+            numberOfBricks--;
+            setChanged();
+            notifyObservers(gd.getScore());
+        }
+        int index = bricks.indexOf(o);
+        bricks.set(index, new NullBrick());
+        if(numberOfBricks == 0){
+            setChanged();
+            notifyObservers(null);
         }
     }
 
@@ -113,7 +119,7 @@ public class PlayableLevel extends Observable implements Level, Observer {
     }
 
     @Override
-    public void accept(AbstractVisitor visitor) {
+    public void accept(Visitor visitor) {
         visitor.visitPlayableLevel(this);
     }
 }

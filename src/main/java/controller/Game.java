@@ -1,9 +1,13 @@
 package controller;
 
 import logic.brick.Brick;
+import logic.brick.NullBrick;
 import logic.level.Level;
 import logic.level.NullLevel;
+import logic.visitor.GetsDestroyed;
+import logic.visitor.IsPlayable;
 import logic.visitor.IsWinner;
+import logic.visitor.LevelOrBrick;
 
 import java.util.List;
 import java.util.Observable;
@@ -41,11 +45,14 @@ public class Game implements Observer {
     }
 
     public boolean hasNextLevel() {
-        return currentLevel.hasNextLevel();
+        IsPlayable ip = new IsPlayable();
+        currentLevel.getNextLevel().accept(ip);
+        return ip.getValue();
     }
 
     public void goNextLevel() {
         currentLevel = currentLevel.getNextLevel();
+        currentLevel.subscribe(this);
     }
 
     public boolean hasCurrentLevel() {
@@ -105,16 +112,14 @@ public class Game implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        if(arg instanceof Brick)
-            if(((Brick) arg).isMetal())
+        if(arg == null)
+            this.goNextLevel();
+        else{
+            int score = (int) arg;
+            if(score == 0)
                 balls++;
             else
-                currentPoints += ((Brick) arg).getScore();
-        else{
-            if(arg instanceof Level){
-                if(this.hasNextLevel())
-                    this.goNextLevel();
-            }
+                currentPoints += score;
         }
     }
 }
