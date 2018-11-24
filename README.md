@@ -2,8 +2,7 @@
 The objective of this project is to implement the game Breakout, both the logic of the game and the GUI.
 
 (N.B. the dependency diagrams for the current state are in svg and png formats as
-[BreakoutT2.png](cc3002-breakout/BreakoutT2.png) and 
-[dependencyDiagramMethods.svg](cc3002-breakout/dependencyDiagramMethods.svg))
+"BreakoutT2.png" and "dependencyDiagramMethods.svg")
 ## Game Logic
 This first part of the project is about the logic behind the game and it is implemented using primarily the Façade 
 Design Pattern, combined with Observer and Visitor patterns.
