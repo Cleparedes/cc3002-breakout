@@ -1,13 +1,10 @@
 package controller;
 
 import logic.brick.Brick;
-import logic.brick.NullBrick;
 import logic.level.Level;
 import logic.level.NullLevel;
-import logic.visitor.GetsDestroyed;
 import logic.visitor.IsPlayable;
 import logic.visitor.IsWinner;
-import logic.visitor.LevelOrBrick;
 
 import java.util.List;
 import java.util.Observable;
