@@ -1,12 +1,10 @@
-package main.java.logic.level;
-
-import java.util.*;
+package logic.level;
 
 import logic.brick.*;
-import main.java.logic.brick.*;
-import main.java.logic.visitor.GetsDestroyed;
-import main.java.logic.visitor.Visitor;
-import main.java.logic.visitor.IsPlayable;
+import logic.visitor.*;
+
+
+import java.util.*;
 
 public class PlayableLevel extends Observable implements Level, Observer {
 

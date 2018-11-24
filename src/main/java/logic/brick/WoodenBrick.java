@@ -1,6 +1,6 @@
-package main.java.logic.brick;
+package logic.brick;
 
-import main.java.logic.visitor.Visitor;
+import logic.visitor.Visitor;
 
 public class WoodenBrick extends AbstractBrick {
 

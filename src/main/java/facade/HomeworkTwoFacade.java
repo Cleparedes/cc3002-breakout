@@ -1,11 +1,11 @@
-package main.java.facade;
+package facade;
 
-import main.java.controller.Game;
-import main.java.logic.brick.Brick;
-import main.java.logic.level.Level;
-import main.java.logic.level.PlayableLevel;
-import main.java.logic.brick.GlassBrick;
-import main.java.logic.brick.MetalBrick;
+import controller.Game;
+import logic.brick.Brick;
+import logic.level.Level;
+import logic.level.PlayableLevel;
+import logic.brick.GlassBrick;
+import logic.brick.MetalBrick;
 
 import java.util.List;
 

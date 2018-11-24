@@ -1,13 +1,11 @@
-package test.java;
-
-import main.java.controller.Game;
-import main.java.facade.HomeworkTwoFacade;
-import main.java.logic.brick.Brick;
-import main.java.logic.brick.GlassBrick;
-import main.java.logic.brick.MetalBrick;
-import main.java.logic.brick.WoodenBrick;
-import main.java.logic.level.Level;
-import main.java.logic.level.PlayableLevel;
+import controller.Game;
+import facade.HomeworkTwoFacade;
+import logic.brick.Brick;
+import logic.brick.GlassBrick;
+import logic.brick.MetalBrick;
+import logic.brick.WoodenBrick;
+import logic.level.Level;
+import logic.level.PlayableLevel;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,11 +1,11 @@
-package main.java.logic.visitor;
+package logic.visitor;
 
-import main.java.logic.brick.GlassBrick;
-import main.java.logic.brick.MetalBrick;
-import main.java.logic.brick.NullBrick;
-import main.java.logic.brick.WoodenBrick;
-import main.java.logic.level.NullLevel;
-import main.java.logic.level.PlayableLevel;
+import logic.brick.GlassBrick;
+import logic.brick.MetalBrick;
+import logic.brick.NullBrick;
+import logic.brick.WoodenBrick;
+import logic.level.NullLevel;
+import logic.level.PlayableLevel;
 
 public class LevelOrBrick extends Visitor {
 

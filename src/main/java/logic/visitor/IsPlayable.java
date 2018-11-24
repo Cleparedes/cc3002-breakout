@@ -1,7 +1,7 @@
-package main.java.logic.visitor;
+package logic.visitor;
 
-import main.java.logic.level.NullLevel;
-import main.java.logic.level.PlayableLevel;
+import logic.level.NullLevel;
+import logic.level.PlayableLevel;
 
 public class IsPlayable extends Visitor {
 

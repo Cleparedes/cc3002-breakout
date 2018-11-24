@@ -1,4 +1,4 @@
-package main.java.logic.brick;
+package logic.brick;
 
 
 import java.util.Observable;

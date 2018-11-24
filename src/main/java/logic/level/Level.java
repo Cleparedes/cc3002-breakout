@@ -1,7 +1,7 @@
-package main.java.logic.level;
+package logic.level;
 
-import main.java.logic.brick.Brick;
-import main.java.logic.visitor.Visitor;
+import logic.brick.Brick;
+import logic.visitor.Visitor;
 
 import java.util.List;
 import java.util.Observer;

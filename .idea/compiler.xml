@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="breakout" />
+        <module name="cc3002-breakout" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="breakout" target="1.8" />
+      <module name="cc3002-breakout" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
