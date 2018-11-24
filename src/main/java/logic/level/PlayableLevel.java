@@ -19,6 +19,7 @@ public class PlayableLevel extends Observable implements Level, Observer {
     /**
      * Next level, null level if the current level is the last one in queue.
      */
+    private int numberOfBricks;
     private Level nextLevel;
     /**
      * Points obtained in the level so far.
@@ -50,6 +51,7 @@ public class PlayableLevel extends Observable implements Level, Observer {
         }
         bricks.forEach(brick -> brick.subscribe(this));
         this.bricks = bricks;
+        this.numberOfBricks = bricks.size();
         nextLevel = new NullLevel();
         currentPoints = 0;
     }
@@ -61,7 +63,7 @@ public class PlayableLevel extends Observable implements Level, Observer {
 
     @Override
     public int getNumberOfBricks() {
-        return bricks.size();
+        return numberOfBricks;
     }
 
     @Override
@@ -112,6 +114,7 @@ public class PlayableLevel extends Observable implements Level, Observer {
         GetsDestroyed gd = new GetsDestroyed();
         brick.accept(gd);
         currentPoints += gd.getScore();
+        numberOfBricks--;
         setChanged();
         notifyObservers(gd.getScore());
         if(getPoints() == currentPoints){
