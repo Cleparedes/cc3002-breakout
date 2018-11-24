@@ -4,7 +4,6 @@ import logic.brick.GlassBrick;
 import logic.brick.MetalBrick;
 import logic.brick.NullBrick;
 import logic.brick.WoodenBrick;
-import logic.level.Level;
 import logic.level.NullLevel;
 import logic.level.PlayableLevel;
 

@@ -1,3 +1,5 @@
+package test.java;
+
 import controller.Game;
 import facade.HomeworkTwoFacade;
 import logic.brick.Brick;
