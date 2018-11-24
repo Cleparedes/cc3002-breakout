@@ -1,6 +1,6 @@
-package logic.brick;
+package main.java.logic.brick;
 
-import logic.visitor.Visitor;
+import main.java.logic.visitor.Visitor;
 
 public class GlassBrick extends AbstractBrick {
 

@@ -1,7 +1,7 @@
-package logic.visitor;
+package main.java.logic.visitor;
 
-import logic.level.NullLevel;
-import logic.level.PlayableLevel;
+import main.java.logic.level.NullLevel;
+import main.java.logic.level.PlayableLevel;
 
 public class IsWinner extends Visitor {
 

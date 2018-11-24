@@ -1,18 +1,15 @@
 package test.java;
 
-import controller.Game;
-import facade.HomeworkTwoFacade;
-import logic.brick.Brick;
-import logic.brick.GlassBrick;
-import logic.brick.MetalBrick;
-import logic.brick.WoodenBrick;
-import logic.level.Level;
-import logic.level.PlayableLevel;
+import main.java.controller.Game;
+import main.java.facade.HomeworkTwoFacade;
+import main.java.logic.brick.Brick;
+import main.java.logic.brick.GlassBrick;
+import main.java.logic.brick.MetalBrick;
+import main.java.logic.brick.WoodenBrick;
+import main.java.logic.level.Level;
+import main.java.logic.level.PlayableLevel;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -44,7 +41,7 @@ public class Tarea2Test {
         game = new Game(initialBalls);
     }
 
-    @org.junit.Test
+    @Test
     public void testBrick() {
         assertFalse(glassBrick.isDestroyed());
         assertFalse(woodenBrick.isDestroyed());
@@ -74,7 +71,7 @@ public class Tarea2Test {
         assertEquals(0, metalBrick.getScore());
     }
 
-    @org.junit.Test
+    @Test
     public void testLevel(){
         assertEquals("Level 1", level1.getName());
         assertEquals(16, level1.getNumberOfBricks());
@@ -83,7 +80,7 @@ public class Tarea2Test {
         assertEquals(10, level4.getNumberOfBricks());
     }
 
-    @org.junit.Test
+    @Test
     public void testGame(){
         assertEquals(initialBalls, game.getBallsLeft());
     }

@@ -1,8 +1,8 @@
-package logic.visitor;
+package main.java.logic.visitor;
 
-import logic.brick.GlassBrick;
-import logic.brick.MetalBrick;
-import logic.brick.WoodenBrick;
+import main.java.logic.brick.GlassBrick;
+import main.java.logic.brick.MetalBrick;
+import main.java.logic.brick.WoodenBrick;
 
 public class GetsDestroyed extends Visitor{
 

@@ -1,9 +1,11 @@
-package facade;
+package main.java.facade;
 
-import controller.Game;
-import logic.brick.Brick;
-import logic.level.Level;
-import logic.level.PlayableLevel;
+import main.java.controller.Game;
+import main.java.logic.brick.Brick;
+import main.java.logic.level.Level;
+import main.java.logic.level.PlayableLevel;
+import main.java.logic.brick.GlassBrick;
+import main.java.logic.brick.MetalBrick;
 
 import java.util.List;
 
@@ -25,8 +27,8 @@ public class HomeworkTwoFacade {
      *
      * @param name           the name of the level
      * @param numberOfBricks the number of bricks in the level
-     * @param probOfGlass    the probability of a {@link logic.brick.GlassBrick}
-     * @param probOfMetal    the probability of a {@link logic.brick.MetalBrick}
+     * @param probOfGlass    the probability of a {@link GlassBrick}
+     * @param probOfMetal    the probability of a {@link MetalBrick}
      * @param seed           the seed for the random number generator
      * @return a new level determined by the parameters
      * @see Level
@@ -40,7 +42,7 @@ public class HomeworkTwoFacade {
      *
      * @param name           the name of the level
      * @param numberOfBricks the number of bricks in the level
-     * @param probOfGlass    the probability of a {@link logic.brick.GlassBrick}
+     * @param probOfGlass    the probability of a {@link GlassBrick}
      * @param seed           the seed for the random number generator
      * @return a new level determined by the parameters
      * @see Level

@@ -1,7 +1,6 @@
-package logic.brick;
+package main.java.logic.brick;
 
-import logic.level.Level;
-import logic.visitor.Visitor;
+import main.java.logic.visitor.Visitor;
 
 import java.util.Observer;
 

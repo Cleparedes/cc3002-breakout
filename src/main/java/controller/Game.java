@@ -1,10 +1,10 @@
-package controller;
+package main.java.controller;
 
-import logic.brick.Brick;
-import logic.level.Level;
-import logic.level.NullLevel;
-import logic.visitor.IsPlayable;
-import logic.visitor.IsWinner;
+import main.java.logic.brick.Brick;
+import main.java.logic.level.Level;
+import main.java.logic.level.NullLevel;
+import main.java.logic.visitor.IsPlayable;
+import main.java.logic.visitor.IsWinner;
 
 import java.util.List;
 import java.util.Observable;
