@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/breakout.iml" filepath="$PROJECT_DIR$/breakout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cc3002-breakout.iml" filepath="$PROJECT_DIR$/.idea/cc3002-breakout.iml" />
     </modules>
   </component>
 </project>
