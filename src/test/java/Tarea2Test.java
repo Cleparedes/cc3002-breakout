@@ -97,5 +97,11 @@ public class Tarea2Test {
     @Test
     public void testGame(){
         assertEquals(initialBalls, game.getBallsLeft());
+        assertFalse(game.winner());
+        game.addPlayingLevel(level4);
+        assertEquals("Level 4", game.getCurrentLevel().getName());
+        game.getCurrentLevel().getBricks().forEach(Brick::hit);
+        assertEquals("Level 0", game.getCurrentLevel().getName());
+        assertTrue(game.winner());
     }
 }

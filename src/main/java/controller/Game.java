@@ -70,7 +70,7 @@ public class Game implements Observer {
     }
 
     public void addPlayingLevel(Level level) {
-        currentLevel.addPlayingLevel(level);
+        currentLevel = currentLevel.addPlayingLevel(level);
     }
 
     public int getLevelPoints() {
