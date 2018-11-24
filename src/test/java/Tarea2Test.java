@@ -98,5 +98,7 @@ public class Tarea2Test {
         game.addPlayingLevel(level4);
         assertEquals("Level 4", game.getCurrentLevel().getName());
         game.getCurrentLevel().getBricks().forEach(Brick::hit);
+        assertEquals("", game.getCurrentLevel().getName());
+        assertTrue(game.winner());
     }
 }

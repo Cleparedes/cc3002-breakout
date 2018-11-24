@@ -123,6 +123,7 @@ public class Game implements Observer {
      */
     public void addPlayingLevel(Level level) {
         currentLevel = currentLevel.addPlayingLevel(level);
+        currentLevel.subscribe(this);
     }
 
     /**
