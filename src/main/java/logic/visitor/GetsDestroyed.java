@@ -4,8 +4,13 @@ import logic.brick.GlassBrick;
 import logic.brick.MetalBrick;
 import logic.brick.WoodenBrick;
 
+/**
+ * Gets the score of a {@Link Brick} once is destroyed
+ */
 public class GetsDestroyed extends Visitor{
-
+    /**
+     * Resulting score.
+     */
     private int score;
 
     @Override

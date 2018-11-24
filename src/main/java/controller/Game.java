@@ -126,7 +126,7 @@ public class Game implements Observer {
     }
 
     /**
-     * Gets the total number of points obtainable in a level
+     * Gets the total number of points obtainable in a level.
      *
      * @return  points to win the level.
      */
@@ -134,14 +134,29 @@ public class Game implements Observer {
         return currentLevel.getPoints();
     }
 
+    /**
+     * Gets the current points obtained throughout the game.
+     *
+     * @return current points of the game.
+     */
     public int getCurrentPoints() {
         return currentPoints;
     }
 
+    /**
+     * Gets the number of balls left (or lives left).
+     *
+     * @return  balls left.
+     */
     public int getBallsLeft() {
         return balls;
     }
 
+    /**
+     * Reduces the number of balls by 1 and returns the new current amount of balls.
+     *
+     * @return new amount of balls.
+     */
     public int dropBall() {
         if(balls == 0)
             return 0;
@@ -149,6 +164,11 @@ public class Game implements Observer {
         return balls;
     }
 
+    /**
+     * Whether the player has lost the game or not.
+     *
+     * @return true if the player is out of lives, false if otherwise.
+     */
     public boolean isGameOver() {
         return balls == 0;
     }
@@ -164,6 +184,16 @@ public class Game implements Observer {
         return iw.getValue();
     }
 
+    /**
+     * Override of the Observer interface method update:
+     * <p>
+     * If the game gets notified be a {@Link Level} it will receive the argument null and go to the next level.
+     * <p>
+     * Otherwise the argument must be an integer representing the score obtained after the destruction of a {@Link Brick}.
+     *
+     * @param o     Observable that notified, always a {@Link Level}.
+     * @param arg   argument of the call, null if {@Link Level} is complete, an integer if a {@Link Brick} was destroyed.
+     */
     @Override
     public void update(Observable o, Object arg) {
         if(arg == null)

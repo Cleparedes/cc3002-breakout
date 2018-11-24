@@ -8,11 +8,32 @@ import java.util.*;
 
 public class PlayableLevel extends Observable implements Level, Observer {
 
+    /**
+     * Name of the level.
+     */
     private String name;
+    /**
+     * List of {@Link Brick}s of the level.
+     */
     private List<Brick> bricks;
+    /**
+     * Next level, null level if the current level is the last one in queue.
+     */
     private Level nextLevel;
+    /**
+     * Points obtained in the level so far.
+     */
     private int currentPoints;
 
+    /**
+     * Constructor of a playable level.
+     *
+     * @param name              name of the level.
+     * @param numberOfBricks    total amount of normal {@Link Brick}s (Glass or Wooden).
+     * @param probOfGlass       probability of a normal {@Link Brick} to be Glass or not.
+     * @param probOfMetal       probability of a metal {@Link Brick} to exist.
+     * @param seed              seed to apply the above probabilities.
+     */
     public PlayableLevel(String name, int numberOfBricks, double probOfGlass, double probOfMetal, int seed){
         this.name = name;
         Random generator = new Random(seed);
@@ -99,6 +120,7 @@ public class PlayableLevel extends Observable implements Level, Observer {
         }
     }
 
+    @Override
     public void subscribe(Observer game){
         addObserver(game);
     }

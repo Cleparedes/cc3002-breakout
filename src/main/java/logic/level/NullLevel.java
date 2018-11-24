@@ -9,8 +9,16 @@ import java.util.Observer;
 
 public class NullLevel implements Level{
 
+    /**
+     * Whether the null level is the tail of the level list or not.
+     */
     private boolean isFinal;
 
+    /**
+     * Constructor of a null level.
+     *
+     * @param isFinal whether the level is at the end or not.
+     */
     private NullLevel(boolean isFinal){
         this.isFinal = isFinal;
     }
@@ -19,6 +27,11 @@ public class NullLevel implements Level{
         this(false);
     }
 
+    /**
+     * Void constructor, by default is not at the tail of the queue.
+     *
+     * @return a not final null level
+     */
     public boolean isFinal(){
         return isFinal;
     }
@@ -35,7 +48,7 @@ public class NullLevel implements Level{
 
     @Override
     public List<Brick> getBricks() {
-        return new ArrayList<Brick>();
+        return new ArrayList<>();
     }
 
     @Override
