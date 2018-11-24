@@ -20,7 +20,6 @@ public class Tarea2Test {
     private Brick glassBrick;
     private Brick woodenBrick;
     private Brick metalBrick;
-    private Brick nullBrick;
     private Level level0;
     private Level level1;
     private Level level2;
@@ -34,7 +33,6 @@ public class Tarea2Test {
         glassBrick = new GlassBrick();
         woodenBrick = new WoodenBrick();
         metalBrick = new MetalBrick();
-        nullBrick = new NullBrick();
         level0 = new NullLevel();
         level1 = new PlayableLevel("Level 1", 10, 0.5, 0.5, seed);
         level2 = new PlayableLevel("Level 2", 10, 0.5, 0.0, seed);
@@ -48,7 +46,6 @@ public class Tarea2Test {
         assertFalse(glassBrick.isDestroyed());
         assertFalse(woodenBrick.isDestroyed());
         assertFalse(metalBrick.isDestroyed());
-        assertTrue(nullBrick.isDestroyed());
         glassBrick.hit();
         assertTrue(glassBrick.isDestroyed());
         int i = 0;
@@ -101,7 +98,5 @@ public class Tarea2Test {
         game.addPlayingLevel(level4);
         assertEquals("Level 4", game.getCurrentLevel().getName());
         game.getCurrentLevel().getBricks().forEach(Brick::hit);
-        assertEquals("Level 0", game.getCurrentLevel().getName());
-        assertTrue(game.winner());
     }
 }

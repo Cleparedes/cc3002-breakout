@@ -6,8 +6,7 @@ import logic.brick.WoodenBrick;
 
 public class GetsDestroyed extends Visitor{
 
-    public int score = 0;
-    public boolean isMetal = false;
+    private int score;
 
     @Override
     public void visitGlassBrick(GlassBrick glassBrick){
@@ -21,14 +20,10 @@ public class GetsDestroyed extends Visitor{
 
     @Override
     public void visitMetalBrick(MetalBrick metalBrick){
-        isMetal = true;
+        score = metalBrick.getScore();
     }
 
     public int getScore(){
         return score;
-    }
-
-    public boolean isMetal(){
-        return isMetal;
     }
 }

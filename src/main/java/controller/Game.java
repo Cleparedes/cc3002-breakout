@@ -17,10 +17,24 @@ import java.util.Observer;
  */
 public class Game implements Observer {
 
+    /**
+     *  Current number of balls in game (lives).
+     */
     private int balls;
+    /**
+     * Current level being displayed.
+     */
     private Level currentLevel;
+    /**
+     * Current points obtained across all levels played.
+     */
     private int currentPoints;
 
+    /**
+     * Game constructor.
+     *
+     * @param balls number of initial balls of the game.
+     */
     public Game(int balls){
         this.balls = balls;
         currentLevel = new NullLevel();
@@ -29,50 +43,93 @@ public class Game implements Observer {
     }
 
     /**
-     * Gets the number of {@link Brick} in the current level, that are still not destroyed
+     * Gets the number of {@link Brick} in the current level, that are still not destroyed.
      *
-     * @return the number of intact bricks in the current level
+     * @return the number of intact bricks in the current level.
      */
     public int numberOfBricks(){
         return currentLevel.getNumberOfBricks();
     }
 
+    /**
+     * Gets the list of {@link Brick}s from the current level.
+     *
+     * @return  list of {@link Brick}s.
+     */
     public List<Brick> getBricks() {
         return currentLevel.getBricks();
     }
 
+    /**
+     * Whether or not the next {@link Level} is playable or not.
+     *
+     * @return true if the next {@link Level} is playable, false if otherwise.
+     */
     public boolean hasNextLevel() {
         IsPlayable ip = new IsPlayable();
         currentLevel.getNextLevel().accept(ip);
         return ip.getValue();
     }
 
+    /**
+     * Sets the next {@link Level} as the current level and turns it into an observed by Game.
+     */
     public void goNextLevel() {
         currentLevel = currentLevel.getNextLevel();
         currentLevel.subscribe(this);
     }
 
+    /**
+     * Whether the current {@link Level} is playable or not.
+     *
+     * @return  true if the {@link Level} is playable, false otherwise.
+     */
     public boolean hasCurrentLevel() {
         return currentLevel.isPlayableLevel();
     }
 
+    /**
+     * Gets the name of the current {@link Level}.
+     *
+     * @return  name of the current {@link Level}.
+     */
     public String getLevelName() {
         return currentLevel.getName();
     }
 
+    /**
+     * Gets the current {@link Level}.
+     *
+     * @return  current {@link Level}.
+     */
     public Level getCurrentLevel() {
         return currentLevel;
     }
 
+    /**
+     * Sets the current as the one given ignoring any conditions.
+     *
+     * @param level {@link Level} to be set as current {@link Level}.
+     */
     public void setCurrentLevel(Level level) {
         currentLevel = level;
         level.subscribe(this);
     }
 
+    /**
+     * Adds a {@link Level} to the end of the queue to be played in the game.
+     *
+     * @param level {@link Level} to be put in the queue.
+     */
     public void addPlayingLevel(Level level) {
         currentLevel = currentLevel.addPlayingLevel(level);
     }
 
+    /**
+     * Gets the total number of points obtainable in a level
+     *
+     * @return  points to win the level.
+     */
     public int getLevelPoints() {
         return currentLevel.getPoints();
     }

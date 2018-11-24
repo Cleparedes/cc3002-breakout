@@ -2,7 +2,6 @@ package logic.visitor;
 
 import logic.brick.GlassBrick;
 import logic.brick.MetalBrick;
-import logic.brick.NullBrick;
 import logic.brick.WoodenBrick;
 import logic.level.NullLevel;
 import logic.level.PlayableLevel;
@@ -22,8 +21,5 @@ public abstract class Visitor {
     }
 
     public void visitMetalBrick(MetalBrick metalBrick){
-    }
-
-    public void visitNullBrick(NullBrick nullBrick){
     }
 }

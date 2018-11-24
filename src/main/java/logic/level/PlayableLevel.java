@@ -11,12 +11,10 @@ public class PlayableLevel extends Observable implements Level, Observer {
     private String name;
     private List<Brick> bricks;
     private Level nextLevel;
-    private int numberOfBricks;
-    private int numberOfMetalBricks;
+    private int currentPoints;
 
     public PlayableLevel(String name, int numberOfBricks, double probOfGlass, double probOfMetal, int seed){
         this.name = name;
-        this.numberOfBricks = numberOfBricks;
         Random generator = new Random(seed);
         List<Brick> bricks = new ArrayList<>();
         for(int i=0; i<numberOfBricks; i++){
@@ -26,14 +24,13 @@ public class PlayableLevel extends Observable implements Level, Observer {
                 bricks.add(new WoodenBrick());
         }
         for(int i=0; i<numberOfBricks; i++){
-            if(generator.nextDouble() < probOfMetal) {
+            if(generator.nextDouble() < probOfMetal)
                 bricks.add(new MetalBrick());
-                this.numberOfMetalBricks++;
-            }
         }
         bricks.forEach(brick -> brick.subscribe(this));
         this.bricks = bricks;
         nextLevel = new NullLevel();
+        currentPoints = 0;
     }
 
     @Override
@@ -43,7 +40,7 @@ public class PlayableLevel extends Observable implements Level, Observer {
 
     @Override
     public int getNumberOfBricks() {
-        return numberOfBricks + numberOfMetalBricks;
+        return bricks.size();
     }
 
     @Override
@@ -93,19 +90,10 @@ public class PlayableLevel extends Observable implements Level, Observer {
         Brick brick = (Brick) o;
         GetsDestroyed gd = new GetsDestroyed();
         brick.accept(gd);
-        if(gd.isMetal()) {
-            numberOfMetalBricks--;
-            setChanged();
-            notifyObservers(0);
-        }
-        else{
-            numberOfBricks--;
-            setChanged();
-            notifyObservers(gd.getScore());
-        }
-        int index = bricks.indexOf(o);
-        bricks.set(index, new NullBrick());
-        if(numberOfBricks == 0){
+        currentPoints += gd.getScore();
+        setChanged();
+        notifyObservers(gd.getScore());
+        if(getPoints() == currentPoints){
             setChanged();
             notifyObservers(null);
         }
