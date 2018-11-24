@@ -11,7 +11,7 @@ public class NullLevel implements Level{
 
     private boolean isFinal;
 
-    public NullLevel(boolean isFinal){
+    private NullLevel(boolean isFinal){
         this.isFinal = isFinal;
     }
 

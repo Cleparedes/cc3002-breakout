@@ -32,9 +32,7 @@ public class PlayableLevel extends Observable implements Level, Observer {
                 this.numberOfMetalBricks++;
             }
         }
-        bricks.forEach(brick -> {
-            brick.subscribe(this);
-        });
+        bricks.forEach(brick -> brick.subscribe(this));
         this.bricks = bricks;
         nextLevel = new NullLevel();
     }
