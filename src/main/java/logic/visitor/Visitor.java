@@ -8,7 +8,7 @@ import logic.level.Level;
 import logic.level.NullLevel;
 import logic.level.PlayableLevel;
 
-public abstract class AbstractVisitor {
+public abstract class Visitor {
 
     public void visitPlayableLevel(PlayableLevel playableLevel){
     }

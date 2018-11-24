@@ -1,5 +1,7 @@
 package logic.brick;
 
+import logic.visitor.Visitor;
+
 public class MetalBrick extends AbstractBrick {
 
     public MetalBrick(){
@@ -12,7 +14,7 @@ public class MetalBrick extends AbstractBrick {
     }
 
     @Override
-    public boolean isMetal() {
-        return true;
+    public void accept(Visitor visitor){
+        visitor.visitMetalBrick(this);
     }
 }

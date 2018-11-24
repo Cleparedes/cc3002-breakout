@@ -1,5 +1,7 @@
 package logic.brick;
 
+import logic.visitor.Visitor;
+
 import java.util.Observer;
 
 public class NullBrick implements Brick {
@@ -24,12 +26,12 @@ public class NullBrick implements Brick {
     }
 
     @Override
-    public boolean isMetal() {
-        return false;
+    public void subscribe(Observer level) {
+
     }
 
     @Override
-    public void subscribe(Observer level) {
+    public void accept(Visitor visitor) {
 
     }
 }

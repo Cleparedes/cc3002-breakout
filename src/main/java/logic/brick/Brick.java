@@ -1,6 +1,7 @@
 package logic.brick;
 
 import logic.level.Level;
+import logic.visitor.Visitor;
 
 import java.util.Observer;
 
@@ -40,16 +41,16 @@ public interface Brick {
     int remainingHits();
 
     /**
-     * Gets whether or not the brick is a MetalBrick.
-     *
-     * @return  true if it's a MetalBrick, false if it isn't
-     */
-    boolean isMetal();
-
-    /**
      * Sets the {@Link Level} as an Observer of the Brick.
      *
      * @param level the level containing the brick
      */
     void subscribe(Observer level);
+
+    /**
+     * Allows a {@Link Visitor} to perform an action over the Brick.
+     *
+     * @param visitor   a subclass of {@Link Visitor} with a designated action
+     */
+    void accept(Visitor visitor);
 }
