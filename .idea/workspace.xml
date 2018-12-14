@@ -2,62 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0c8607e-c085-4d7f-bda5-2af61a377de9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_kotlin_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_almasb_fxgl_0_5_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_almasb_fxgl_base_0_5_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_almasb_fxgl_plugin_audio_0_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_almasb_fxgl_plugin_audio_desktop_0_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_gluonhq_charm_down_core_3_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_gluonhq_charm_down_plugin_lifecycle_3_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_gluonhq_charm_down_plugin_storage_3_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_gluonhq_charm_down_plugin_storage_desktop_3_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_reflect_1_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_2_51.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_2_51.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlinx_atomicfu_common_0_10_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlinx_kotlinx_coroutines_core_0_23_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlinx_kotlinx_coroutines_core_common_0_23_4.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/gui/BreakoutApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/GameApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/PlayerControl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/gui/PongApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/sounds/oof.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/ball.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/brick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/newdude.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/controller/Game.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/facade/HomeworkTwoFacade.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logic/brick/AbstractBrick.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logic/brick/Brick.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logic/brick/GlassBrick.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logic/brick/MetalBrick.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logic/brick/WoodenBrick.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logic/level/Level.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logic/level/NullLevel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logic/level/PlayableLevel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logic/visitor/GetsDestroyed.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logic/visitor/IsPlayable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logic/visitor/IsWinner.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logic/visitor/Visitor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/BigTestT2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/Tarea2Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cc3002-breakout.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cc3002-breakout.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/facade/HomeworkTwoFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/facade/HomeworkTwoFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/brick/Brick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/brick/Brick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/brick/GlassBrick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/brick/GlassBrick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/brick/MetalBrick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/brick/MetalBrick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/brick/WoodenBrick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/brick/WoodenBrick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/level/PlayableLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/level/PlayableLevel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -130,7 +77,7 @@
           <entry key="dummy" value="47" />
           <entry key="java" value="12095" />
           <entry key="md" value="4409" />
-          <entry key="txt" value="73" />
+          <entry key="txt" value="159" />
           <entry key="xml" value="42" />
         </counts>
       </usages-collector>
@@ -138,7 +85,7 @@
         <counts>
           <entry key="JAVA" value="12095" />
           <entry key="Markdown" value="4409" />
-          <entry key="PLAIN_TEXT" value="120" />
+          <entry key="PLAIN_TEXT" value="206" />
           <entry key="XML" value="42" />
         </counts>
       </usages-collector>
@@ -149,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/gui/GameFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="17" column="72" lean-forward="true" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+            <state relative-caret-position="230">
+              <caret line="42" column="41" lean-forward="true" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -354,7 +301,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544817716270" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544818870071" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/logic" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -481,7 +428,7 @@
       <workItem from="1544126950049" duration="2263000" />
       <workItem from="1544400520454" duration="7511000" />
       <workItem from="1544474422975" duration="14836000" />
-      <workItem from="1544794393270" duration="12828000" />
+      <workItem from="1544794393270" duration="13516000" />
     </task>
     <task id="LOCAL-00001" summary="To Do:&#10;Finish readme&#10;Complete test">
       <created>1543029446664</created>
@@ -588,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543092786293</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="To do:&#10;- Make the ball bounce off the bar&#10;- Implement initGameVars">
+      <created>1544818350549</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1544818350550</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -624,7 +578,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65929000" />
+    <option name="totallyTimeSpent" value="66617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -675,7 +629,8 @@
     <MESSAGE value="To Do:&#10;Finish readme&#10;Complete test" />
     <MESSAGE value="To Do:&#10;Complete test" />
     <MESSAGE value="95% coverage" />
-    <option name="LAST_COMMIT_MESSAGE" value="95% coverage" />
+    <MESSAGE value="To do:&#10;- Make the ball bounce off the bar&#10;- Implement initGameVars" />
+    <option name="LAST_COMMIT_MESSAGE" value="To do:&#10;- Make the ball bounce off the bar&#10;- Implement initGameVars" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -760,6 +715,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#217#218#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -767,6 +732,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding>
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -774,6 +747,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -913,8 +894,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui/GameFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="17" column="72" lean-forward="true" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+        <state relative-caret-position="230">
+          <caret line="42" column="41" lean-forward="true" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
