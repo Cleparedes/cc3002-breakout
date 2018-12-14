@@ -52,4 +52,25 @@ public interface Brick {
      * @param visitor   a subclass of {@Link Visitor} with a designated action
      */
     void accept(Visitor visitor);
+
+    /**
+     * Whether or not the Brick is a GlassBrick or not.
+     *
+     * @return true if it is a GlassBrick, false otherwise.
+     */
+    boolean isGlassBrick();
+
+    /**
+     * Whether or not the Brick is a WoodenBrick or not.
+     *
+     * @return true if it is a WoodenBrick, false otherwise.
+     */
+    boolean isWoodenBrick();
+
+    /**
+     * Whether or not the Brick is a MetalBrick or not.
+     *
+     * @return true if it is a MetalBrick, false otherwise.
+     */
+    boolean isMetalBrick();
 }

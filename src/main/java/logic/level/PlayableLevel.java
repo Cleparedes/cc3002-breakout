@@ -35,7 +35,7 @@ public class PlayableLevel extends Observable implements Level, Observer {
      * @param probOfMetal       probability of a metal {@Link Brick} to exist.
      * @param seed              seed to apply the above probabilities.
      */
-    public PlayableLevel(String name, int numberOfBricks, double probOfGlass, double probOfMetal, int seed){
+    public PlayableLevel(String name, int numberOfBricks, double probOfGlass, double probOfMetal, long seed){
         this.name = name;
         Random generator = new Random(seed);
         List<Brick> bricks = new ArrayList<>();
