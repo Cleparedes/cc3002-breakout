@@ -72,6 +72,13 @@ public class GameApp extends GameApplication {
             }
         });
 
+        getPhysicsWorld().addCollisionHandler(new CollisionHandler(Types.PLAYER, Types.WALL) {
+            @Override
+            protected void onHitBoxTrigger(Entity bar, Entity ball, HitBox boxBar, HitBox boxBall) {
+
+            }
+        });
+
         getPhysicsWorld().addCollisionHandler(new CollisionHandler(Types.PLAYER, Types.BALL) {
             @Override
             protected void onHitBoxTrigger(Entity bar, Entity ball, HitBox boxBar, HitBox boxBall) {
