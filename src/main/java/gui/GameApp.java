@@ -39,8 +39,16 @@ public class GameApp extends GameApplication {
         Entity bar = newBar(getWidth() * 0.5, getHeight() * 0.9);
         Entity ball = newBall(getWidth() * 0.5, getHeight() * 0.8);
         Entity walls = newWalls();
+
         hw2.setCurrentLevel(hw2.newLevelWithBricksFull("Nivel 1",10,0.5, 0.5, 0));
-        hw2.getBricks().forEach(brick -> getGameWorld().addEntity(newBrick(newX(), newY(), brick)));
+        PositionHandler ph = new PositionHandler(getWidth(), getHeight());
+
+        hw2.getBricks().forEach(brick -> {
+            int[] p = ph.getPosition();
+            getGameWorld().addEntity(newBrick(p[0], p[1], brick));
+        });
+
+        getGameState().setValue("name", hw2.getLevelName());
 
         getGameWorld().addEntities(background, bar, ball, walls);
     }
@@ -64,6 +72,16 @@ public class GameApp extends GameApplication {
                         .forEach(p -> p.getComponent(PlayerControl.class).left());
             }
         }, KeyCode.A);
+
+        input.addAction(new UserAction("Reset Ball") {
+            @Override
+            protected void onAction() {
+                getGameWorld().getEntitiesByType(Types.BALL)
+                        .forEach(Entity::removeFromWorld);
+                Entity ball = newBall(getWidth() * 0.5, getHeight() * 0.8);
+                getGameWorld().addEntity(ball);
+            }
+        }, KeyCode.R);
     }
 
     @Override
@@ -85,6 +103,7 @@ public class GameApp extends GameApplication {
                                 .getEntitiesByType(Types.PLAYER)
                                 .forEach(Entity::removeFromWorld);
                     }
+                    getGameState().setValue("lives", hw2.getBallsLeft());
                 }
             }
         });
@@ -93,6 +112,15 @@ public class GameApp extends GameApplication {
             @Override
             protected void onHitBoxTrigger(Entity brick, Entity ball, HitBox boxBrick, HitBox boxBall) {
                 brick.getComponent(BrickControl.class).onHit();
+                getGameState().setValue("score", hw2.getCurrentPoints());
+                getGameState().setValue("name", hw2.getLevelName());
+                getGameState().setValue("lives", hw2.getBallsLeft());
+                if(hw2.winner()){
+                    FXGL.getNotificationService().pushNotification("YOU WON");
+                    getGameWorld()
+                            .getEntitiesByType(Types.PLAYER)
+                            .forEach(Entity::removeFromWorld);
+                }
             }
         });
     }
@@ -106,19 +134,34 @@ public class GameApp extends GameApplication {
 
     @Override
     protected void initUI(){
-        Text name = getUIFactory().newText("", Color.WHITE, 48);
-        Text lives = getUIFactory().newText("", Color.WHITE, 22);
-        Text score = getUIFactory().newText("", Color.WHITE, 22);
+        Text name = getUIFactory().newText("", Color.WHITE, 30);
+        Text lives = getUIFactory().newText("", Color.WHITE, 20);
+        Text score = getUIFactory().newText("", Color.WHITE, 20);
 
-        name.setTranslateX(50);
-        name.setTranslateY(100);
+        Text livesT = getUIFactory().newText("Balls: ", Color.WHITE, 20);
+        Text scoreT = getUIFactory().newText("Score: ", Color.WHITE, 20);
+
+        name.setTranslateX(250);
+        name.setTranslateY(30);
+
+        livesT.setTranslateX(10);
+        livesT.setTranslateY(20);
+        lives.setTranslateX(80);
+        lives.setTranslateY(20);
+
+        scoreT.setTranslateX(450);
+        scoreT.setTranslateY(20);
+        score.setTranslateX(550);
+        score.setTranslateY(20);
 
         name.textProperty().bind(getGameState().stringProperty("name"));
         lives.textProperty().bind(getGameState().intProperty("lives").asString());
         score.textProperty().bind(getGameState().intProperty("score").asString());
 
         getGameScene().addUINode(name);
+        getGameScene().addUINode(livesT);
         getGameScene().addUINode(lives);
+        getGameScene().addUINode(scoreT);
         getGameScene().addUINode(score);
     }
 

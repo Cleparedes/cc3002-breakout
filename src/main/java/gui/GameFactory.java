@@ -15,8 +15,6 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import logic.brick.Brick;
 
-import java.util.Random;
-
 final class GameFactory implements EntityFactory {
 
     private static final int BAR_WIDTH = 100;
@@ -25,7 +23,7 @@ final class GameFactory implements EntityFactory {
     private static final int BRICK_WIDTH = 60;
     private static final int BRICK_HEIGHT = 25;
     private static final int BALL_SPEED = 5*60;
-    private static Random random = new Random(123456);
+
 
     static Entity newBar(double x, double y){
         PhysicsComponent barPhysics = new PhysicsComponent();
@@ -45,7 +43,6 @@ final class GameFactory implements EntityFactory {
                 .renderLayer(RenderLayer.BACKGROUND)
                 .build();
     }
-
 
     static Entity newBall(double x, double y){
         PhysicsComponent ballPhysics = new PhysicsComponent();
@@ -88,15 +85,5 @@ final class GameFactory implements EntityFactory {
                 .viewFromNodeWithBBox(new Rectangle(BRICK_WIDTH, BRICK_HEIGHT, color))
                 .with(new BrickControl(brick), new PhysicsComponent(), new CollidableComponent(true))
                 .build();
-    }
-
-    static int newX(){
-        int x = random.nextInt(600 - BRICK_WIDTH)/BRICK_WIDTH;
-        return x * BRICK_WIDTH;
-    }
-
-    static int newY(){
-        int y = random.nextInt(300 - BRICK_HEIGHT)/BRICK_HEIGHT;
-        return y * BRICK_HEIGHT;
     }
 }
