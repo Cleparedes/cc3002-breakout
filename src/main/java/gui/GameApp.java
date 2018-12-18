@@ -7,20 +7,22 @@ import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.settings.GameSettings;
+import facade.HomeworkTwoFacade;
 import javafx.scene.input.KeyCode;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+
+import java.util.Map;
 
 import static gui.GameFactory.*;
 
 public class GameApp extends GameApplication {
 
-    private static final int BAR_WIDTH = 100;
-    private static final int BAR_HEIGHT = 30;
-    private static final int BALL_SIZE = 10;
-    private static final int BALL_SPEED = 5*60;
-
     public enum Types{
-        PLAYER, BALL, WALL
+        PLAYER, BALL, WALL, BRICK
     }
+
+    private HomeworkTwoFacade hw2 = new HomeworkTwoFacade();
 
     @Override
     protected void initSettings(GameSettings gameSettings){
@@ -33,9 +35,12 @@ public class GameApp extends GameApplication {
     @Override
     protected void initGame(){
         Entity background = newBackground();
-        Entity bar = newBar(getWidth() / 2.0 - BAR_WIDTH / 2.0, getHeight() * 0.9, BAR_WIDTH, BAR_HEIGHT);
-        Entity ball = newBall(getWidth() / 2.0 - BALL_SIZE / 2.0, getHeight() / 2.0 - BALL_SIZE / 2.0, BALL_SIZE, BALL_SPEED);
+        Entity bar = newBar(getWidth() / 2.0, getHeight() * 0.9);
+        Entity ball = newBall(getWidth() / 2.0, getHeight() / 2.0);
         Entity walls = newWalls();
+        hw2.setCurrentLevel(hw2.newLevelWithBricksFull("Nivel 1",10,0.5, 0.5, 0));
+        hw2.getBricks().forEach(brick -> getGameWorld().addEntity(newBrick(newX(), newY(), brick)));
+
         getGameWorld().addEntities(background, bar, ball, walls);
     }
 
@@ -72,19 +77,30 @@ public class GameApp extends GameApplication {
             }
         });
 
-        getPhysicsWorld().addCollisionHandler(new CollisionHandler(Types.PLAYER, Types.WALL) {
+        getPhysicsWorld().addCollisionHandler(new CollisionHandler(Types.BRICK, Types.BALL) {
             @Override
-            protected void onHitBoxTrigger(Entity bar, Entity ball, HitBox boxBar, HitBox boxBall) {
-
+            protected void onHitBoxTrigger(Entity brick, Entity ball, HitBox boxBrick, HitBox boxBall) {
+                brick.getComponent(BrickControl.class).onHit();
             }
         });
+    }
 
-        getPhysicsWorld().addCollisionHandler(new CollisionHandler(Types.PLAYER, Types.BALL) {
-            @Override
-            protected void onHitBoxTrigger(Entity bar, Entity ball, HitBox boxBar, HitBox boxBall) {
+    @Override
+    protected void initGameVars(Map<String, Object> vars){
+        vars.put("name", hw2.getLevelName());
+        vars.put("lives", hw2.getBallsLeft());
+        vars.put("score", hw2.getCurrentPoints());
+    }
 
-            }
-        });
+    @Override
+    protected void initUI(){
+        Text name = getUIFactory().newText("", Color.WHITE, 48);
+        Text lives = getUIFactory().newText("", Color.WHITE, 22);
+        Text score = getUIFactory().newText("", Color.WHITE, 22);
+
+        name.textProperty().bind(getGameState().stringProperty("name"));
+        lives.textProperty().bind(getGameState().intProperty("lives").asString());
+        score.textProperty().bind(getGameState().intProperty("score").asString());
     }
 
     public static void main(String[] args) {
