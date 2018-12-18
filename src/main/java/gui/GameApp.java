@@ -1,5 +1,6 @@
 package gui;
 
+import com.almasb.fxgl.app.FXGL;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.input.Input;
@@ -35,8 +36,8 @@ public class GameApp extends GameApplication {
     @Override
     protected void initGame(){
         Entity background = newBackground();
-        Entity bar = newBar(getWidth() / 2.0, getHeight() * 0.9);
-        Entity ball = newBall(getWidth() / 2.0, getHeight() / 2.0);
+        Entity bar = newBar(getWidth() * 0.5, getHeight() * 0.9);
+        Entity ball = newBall(getWidth() * 0.5, getHeight() * 0.8);
         Entity walls = newWalls();
         hw2.setCurrentLevel(hw2.newLevelWithBricksFull("Nivel 1",10,0.5, 0.5, 0));
         hw2.getBricks().forEach(brick -> getGameWorld().addEntity(newBrick(newX(), newY(), brick)));
@@ -52,7 +53,7 @@ public class GameApp extends GameApplication {
             @Override
             protected void onAction() {
                 getGameWorld().getEntitiesByType(Types.PLAYER)
-                        .forEach(e -> e.getComponent(PlayerControl.class).right());
+                        .forEach(p -> p.getComponent(PlayerControl.class).right());
             }
         }, KeyCode.D);
 
@@ -60,7 +61,7 @@ public class GameApp extends GameApplication {
             @Override
             protected void onAction() {
                 getGameWorld().getEntitiesByType(Types.PLAYER)
-                        .forEach(e -> e.getComponent(PlayerControl.class).left());
+                        .forEach(p -> p.getComponent(PlayerControl.class).left());
             }
         }, KeyCode.A);
     }
@@ -72,8 +73,19 @@ public class GameApp extends GameApplication {
         getPhysicsWorld().addCollisionHandler(new CollisionHandler(Types.BALL, Types.WALL) {
             @Override
             protected void onHitBoxTrigger(Entity ball, Entity wall, HitBox boxBall, HitBox boxWall) {
-                if(boxWall.getName().equals("BOT"))
+                if(boxWall.getName().equals("BOT")) {
                     ball.removeFromWorld();
+                    if(hw2.dropBall() > 0) {
+                        ball = newBall(getWidth() * 0.5, getHeight() * 0.8);
+                        getGameWorld().addEntity(ball);
+                    }
+                    else {
+                        FXGL.getNotificationService().pushNotification("GAME OVER");
+                        getGameWorld()
+                                .getEntitiesByType(Types.PLAYER)
+                                .forEach(Entity::removeFromWorld);
+                    }
+                }
             }
         });
 
@@ -98,9 +110,16 @@ public class GameApp extends GameApplication {
         Text lives = getUIFactory().newText("", Color.WHITE, 22);
         Text score = getUIFactory().newText("", Color.WHITE, 22);
 
+        name.setTranslateX(50);
+        name.setTranslateY(100);
+
         name.textProperty().bind(getGameState().stringProperty("name"));
         lives.textProperty().bind(getGameState().intProperty("lives").asString());
         score.textProperty().bind(getGameState().intProperty("score").asString());
+
+        getGameScene().addUINode(name);
+        getGameScene().addUINode(lives);
+        getGameScene().addUINode(score);
     }
 
     public static void main(String[] args) {

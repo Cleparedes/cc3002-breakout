@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0c8607e-c085-4d7f-bda5-2af61a377de9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/BrickControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/GameApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/GameApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/GameFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/GameFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,7 +59,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="3" />
-          <entry key="java" value="154" />
+          <entry key="java" value="155" />
           <entry key="md" value="2" />
           <entry key="txt" value="1" />
           <entry key="xml" value="5" />
@@ -70,7 +68,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
-          <entry key="JAVA" value="154" />
+          <entry key="JAVA" value="155" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="5" />
@@ -79,17 +77,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="47" />
-          <entry key="java" value="15194" />
+          <entry key="java" value="15461" />
           <entry key="md" value="4409" />
-          <entry key="txt" value="225" />
+          <entry key="txt" value="248" />
           <entry key="xml" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="15194" />
+          <entry key="JAVA" value="15461" />
           <entry key="Markdown" value="4409" />
-          <entry key="PLAIN_TEXT" value="272" />
+          <entry key="PLAIN_TEXT" value="295" />
           <entry key="XML" value="42" />
         </counts>
       </usages-collector>
@@ -97,11 +95,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gui/GameFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+            <state relative-caret-position="-467">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,15 +107,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/gui/GameApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-467">
-              <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
+            <state relative-caret-position="323">
+              <caret line="85" column="66" lean-forward="true" selection-start-line="85" selection-start-column="66" selection-end-line="85" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3995#3996#0" expanded="true" />
-                <element signature="e#4023#4024#0" expanded="true" />
+                <element signature="e#4196#4197#0" expanded="true" />
+                <element signature="e#4224#4225#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,11 +171,11 @@
         <option value="$PROJECT_DIR$/src/main/java/gui/BallControl.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/MetalBrickControl.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/GlassBrickControl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/BrickControl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/levels/levelMap.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/text/levels/levelMap.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/GameApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/GameFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/BrickControl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/GameApp.java" />
       </list>
     </option>
   </component>
@@ -307,7 +305,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545158650731" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545169814987" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/logic" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -435,7 +433,7 @@
       <workItem from="1544400520454" duration="7511000" />
       <workItem from="1544474422975" duration="14836000" />
       <workItem from="1544794393270" duration="19339000" />
-      <workItem from="1545085573717" duration="14229000" />
+      <workItem from="1545085573717" duration="16927000" />
     </task>
     <task id="LOCAL-00001" summary="To Do:&#10;Finish readme&#10;Complete test">
       <created>1543029446664</created>
@@ -570,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545090779090</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="To do:&#10;- Implement initGameVars&#10;- Implement next level">
+      <created>1545158756896</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1545158756896</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -606,7 +611,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86669000" />
+    <option name="totallyTimeSpent" value="89367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -659,7 +664,8 @@
     <MESSAGE value="95% coverage" />
     <MESSAGE value="To do:&#10;- Make the ball bounce off the bar&#10;- Implement initGameVars" />
     <MESSAGE value="To do:&#10;- Implement brick parser&#10;- Implement initGameVars" />
-    <option name="LAST_COMMIT_MESSAGE" value="To do:&#10;- Implement brick parser&#10;- Implement initGameVars" />
+    <MESSAGE value="To do:&#10;- Implement initGameVars&#10;- Implement next level" />
+    <option name="LAST_COMMIT_MESSAGE" value="To do:&#10;- Implement initGameVars&#10;- Implement next level" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -888,18 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/BrickControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui/PlayerControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -931,24 +925,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/GameApp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/BrickControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-467">
-          <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3995#3996#0" expanded="true" />
-            <element signature="e#4023#4024#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui/GameFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+        <state relative-caret-position="-467">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/GameApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="85" column="66" lean-forward="true" selection-start-line="85" selection-start-column="66" selection-end-line="85" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4196#4197#0" expanded="true" />
+            <element signature="e#4224#4225#0" expanded="true" />
           </folding>
         </state>
       </provider>
