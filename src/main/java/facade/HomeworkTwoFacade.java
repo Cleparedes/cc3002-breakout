@@ -182,7 +182,16 @@ public class HomeworkTwoFacade {
      *
      * @return true if the player won the game, false otherwise
      */
-    public boolean winner() {
+    public boolean winner(){
         return game.winner();
+    }
+
+    /**
+     * Gets the current level's points
+     *
+     * @return current level's points
+     */
+    public int getCurrentLevelPoints(){
+        return getCurrentLevel().getCurrentPoints();
     }
 }

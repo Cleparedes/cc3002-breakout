@@ -82,6 +82,13 @@ public class GameApp extends GameApplication {
                 getGameWorld().addEntity(ball);
             }
         }, KeyCode.R);
+
+        input.addAction(new UserAction("Reset Game") {
+            @Override
+            protected void onAction() {
+                initGame();
+            }
+        }, KeyCode.F);
     }
 
     @Override
@@ -111,10 +118,25 @@ public class GameApp extends GameApplication {
         getPhysicsWorld().addCollisionHandler(new CollisionHandler(Types.BRICK, Types.BALL) {
             @Override
             protected void onHitBoxTrigger(Entity brick, Entity ball, HitBox boxBrick, HitBox boxBall) {
+                BrickControl brickControl = brick.getComponent(BrickControl.class);
+
+                boolean newLevel = false;
+                if(hw2.getCurrentLevelPoints() + brickControl.getScore() == hw2.getLevelPoints())
+                    newLevel = true;
+
                 brick.getComponent(BrickControl.class).onHit();
                 getGameState().setValue("score", hw2.getCurrentPoints());
-                getGameState().setValue("name", hw2.getLevelName());
-                getGameState().setValue("lives", hw2.getBallsLeft());
+                getGameState().setValue("levelScore", hw2.getCurrentLevelPoints());
+
+                if(brickControl.isMetalBrick())
+                    getGameState().setValue("lives", hw2.getBallsLeft());
+
+                if(newLevel) {
+                    getGameState().setValue("name", hw2.getLevelName());
+                    getGameState().increment("levelsPlayed", 1);
+                    getGameState().increment("remainingLevels", -1);
+                }
+
                 if(hw2.winner()){
                     FXGL.getNotificationService().pushNotification("YOU WON");
                     getGameWorld()
@@ -130,37 +152,71 @@ public class GameApp extends GameApplication {
         vars.put("name", hw2.getLevelName());
         vars.put("lives", hw2.getBallsLeft());
         vars.put("score", hw2.getCurrentPoints());
+        vars.put("levelScore", hw2.getCurrentLevelPoints());
+        vars.put("levelsPlayed", 0);
+        vars.put("remainingLevels", 1);
     }
 
     @Override
     protected void initUI(){
-        Text name = getUIFactory().newText("", Color.WHITE, 30);
+        Text name = getUIFactory().newText("", Color.WHITE, 25);
         Text lives = getUIFactory().newText("", Color.WHITE, 20);
-        Text score = getUIFactory().newText("", Color.WHITE, 20);
+        Text score = getUIFactory().newText("", Color.WHITE, 15);
+        Text levelScore = getUIFactory().newText("", Color.WHITE, 20);
+        Text levelsPlayed = getUIFactory().newText("", Color.WHITE, 15);
+        Text remainingLevels = getUIFactory().newText("", Color.WHITE, 15);
 
         Text livesT = getUIFactory().newText("Balls: ", Color.WHITE, 20);
-        Text scoreT = getUIFactory().newText("Score: ", Color.WHITE, 20);
+        Text scoreT = getUIFactory().newText("Global Score: ", Color.WHITE, 15);
+        Text levelScoreT = getUIFactory().newText("Score: ", Color.WHITE, 20);
+        Text levelsPlayedT = getUIFactory().newText("Lvl Played: ", Color.WHITE, 15);
+        Text remainingLevelsT = getUIFactory().newText("Remaining Lvl: ", Color.WHITE, 15);
 
         name.setTranslateX(250);
         name.setTranslateY(30);
 
         livesT.setTranslateX(10);
         livesT.setTranslateY(20);
-        lives.setTranslateX(80);
+        lives.setTranslateX(120);
         lives.setTranslateY(20);
 
+        levelsPlayedT.setTranslateX(10);
+        levelsPlayedT.setTranslateY(35);
+        levelsPlayed.setTranslateX(120);
+        levelsPlayed.setTranslateY(35);
+
+        remainingLevelsT.setTranslateX(10);
+        remainingLevelsT.setTranslateY(50);
+        remainingLevels.setTranslateX(120);
+        remainingLevels.setTranslateY(50);
+
+        levelScoreT.setTranslateX(450);
+        levelScoreT.setTranslateY(20);
+        levelScore.setTranslateX(550);
+        levelScore.setTranslateY(20);
+
         scoreT.setTranslateX(450);
-        scoreT.setTranslateY(20);
+        scoreT.setTranslateY(35);
         score.setTranslateX(550);
-        score.setTranslateY(20);
+        score.setTranslateY(35);
+
 
         name.textProperty().bind(getGameState().stringProperty("name"));
         lives.textProperty().bind(getGameState().intProperty("lives").asString());
+        levelsPlayed.textProperty().bind(getGameState().intProperty("levelsPlayed").asString());
+        remainingLevels.textProperty().bind(getGameState().intProperty("remainingLevels").asString());
+        levelScore.textProperty().bind(getGameState().intProperty("levelScore").asString());
         score.textProperty().bind(getGameState().intProperty("score").asString());
 
         getGameScene().addUINode(name);
         getGameScene().addUINode(livesT);
         getGameScene().addUINode(lives);
+        getGameScene().addUINode(levelsPlayedT);
+        getGameScene().addUINode(levelsPlayed);
+        getGameScene().addUINode(remainingLevelsT);
+        getGameScene().addUINode(remainingLevels);
+        getGameScene().addUINode(levelScoreT);
+        getGameScene().addUINode(levelScore);
         getGameScene().addUINode(scoreT);
         getGameScene().addUINode(score);
     }

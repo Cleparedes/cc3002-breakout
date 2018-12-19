@@ -91,4 +91,9 @@ public class NullLevel implements Level{
     public void accept(Visitor visitor) {
         visitor.visitNullLevel(this);
     }
+
+    @Override
+    public int getCurrentPoints() {
+        return 0;
+    }
 }

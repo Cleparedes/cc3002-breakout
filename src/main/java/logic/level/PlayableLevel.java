@@ -90,10 +90,7 @@ public class PlayableLevel extends Observable implements Level, Observer {
 
     @Override
     public int getPoints() {
-        int p = 0;
-        for(Brick b : bricks)
-            p += b.getScore();
-        return p;
+        return bricks.stream().mapToInt(Brick::getScore).sum();
     }
 
     @Override
@@ -131,5 +128,10 @@ public class PlayableLevel extends Observable implements Level, Observer {
     @Override
     public void accept(Visitor visitor) {
         visitor.visitPlayableLevel(this);
+    }
+
+    @Override
+    public int getCurrentPoints(){
+        return currentPoints;
     }
 }

@@ -88,4 +88,11 @@ public interface Level {
      * @param visitor   a subclass of {@Link Visitor} with a designated action
      */
     void accept(Visitor visitor);
+
+    /**
+     * Returns current points
+     *
+     * @return current points
+     */
+    int getCurrentPoints();
 }

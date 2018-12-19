@@ -11,7 +11,6 @@ import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
 import com.almasb.fxgl.physics.box2d.dynamics.FixtureDef;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import logic.brick.Brick;
 
@@ -39,7 +38,8 @@ final class GameFactory implements EntityFactory {
 
     static Entity newBackground(){
         return Entities.builder()
-                .viewFromNode(new Rectangle(600, 600, Color.BLACK))
+                //.viewFromNode(new Rectangle(600, 600, Color.BLACK))
+                .viewFromTexture("background.jpg")
                 .renderLayer(RenderLayer.BACKGROUND)
                 .build();
     }
@@ -54,7 +54,7 @@ final class GameFactory implements EntityFactory {
                 .at(x - BALL_SIZE / 2.0, y - BALL_SIZE / 2.0)
                 .type(GameApp.Types.BALL)
                 .bbox(new HitBox("Ball", BoundingShape.circle(BALL_SIZE)))
-                .viewFromNode(new Circle(BALL_SIZE, Color.LIGHTCORAL))
+                .viewFromTexture("ball.png")
                 .with(ballPhysics, new CollidableComponent(true))
                 .build();
     }
@@ -67,22 +67,23 @@ final class GameFactory implements EntityFactory {
     }
 
     static Entity newBrick(double x, double y, Brick brick){
-        Color color = Color.RED;
+        String texture = "error.png";
+
         if(brick.isGlassBrick())
-            color = Color.LIGHTBLUE;
+            texture = "GB1.png";
         else{
             if(brick.isWoodenBrick())
-                color = Color.BROWN;
+                texture = "WB1.png";
             else{
                 if(brick.isMetalBrick())
-                    color = Color.GRAY;
+                    texture = "MB1.png";
             }
         }
 
         return Entities.builder()
                 .at(x, y)
                 .type(GameApp.Types.BRICK)
-                .viewFromNodeWithBBox(new Rectangle(BRICK_WIDTH, BRICK_HEIGHT, color))
+                .viewFromTextureWithBBox(texture)
                 .with(new BrickControl(brick), new PhysicsComponent(), new CollidableComponent(true))
                 .build();
     }

@@ -25,7 +25,7 @@ class PositionHandler {
         } while(used[p[0]][p[1]]);
         used[p[0]][p[1]] = true;
         p[0] *= BRICK_WIDTH;
-        p[1] = (p[1]+1) * BRICK_HEIGHT;
+        p[1] = (p[1]+3) * BRICK_HEIGHT;
         return p;
     }
 }
