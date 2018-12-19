@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0c8607e-c085-4d7f-bda5-2af61a377de9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/GB1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/MB1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/MB2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/WB1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/WB2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/bar.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/facade/HomeworkTwoFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/facade/HomeworkTwoFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/BrickControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/BrickControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/GameApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/GameApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/GameFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/GameFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/PositionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/PositionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/level/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/level/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/level/NullLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/level/NullLevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/level/PlayableLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/level/PlayableLevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/textures/ball.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/ball.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/textures/brick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/facade/HomeworkTwoFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/facade/HomeworkTwoFacade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logic/level/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/level/Level.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logic/level/NullLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/level/NullLevel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/logic/level/PlayableLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/level/PlayableLevel.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,8 +60,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="JAVA/" value="1" />
           <entry key="class" value="3" />
-          <entry key="java" value="176" />
+          <entry key="java" value="178" />
           <entry key="md" value="2" />
           <entry key="png" value="2" />
           <entry key="txt" value="1" />
@@ -90,26 +73,27 @@
         <counts>
           <entry key="CLASS" value="3" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="176" />
+          <entry key="JAVA" value="178" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
+          <entry key="UML" value="1" />
           <entry key="XML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="47" />
-          <entry key="java" value="18773" />
+          <entry key="java" value="18787" />
           <entry key="md" value="4409" />
-          <entry key="txt" value="285" />
+          <entry key="txt" value="295" />
           <entry key="xml" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="18773" />
+          <entry key="JAVA" value="18787" />
           <entry key="Markdown" value="4409" />
-          <entry key="PLAIN_TEXT" value="332" />
+          <entry key="PLAIN_TEXT" value="342" />
           <entry key="XML" value="42" />
         </counts>
       </usages-collector>
@@ -118,10 +102,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gui/GameFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gui/GameApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="138" column="16" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
+            <state relative-caret-position="514">
+              <caret line="138" selection-start-line="138" selection-end-line="138" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2855#2856#0" expanded="true" />
@@ -134,21 +130,449 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/gui/BrickControl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#653#654#0" expanded="true" />
-                <element signature="e#689#690#0" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
-                <element signature="e#766#767#0" expanded="true" />
-                <element signature="e#808#809#0" expanded="true" />
-                <element signature="e#845#846#0" expanded="true" />
-                <element signature="e#884#885#0" expanded="true" />
-                <element signature="e#911#912#0" expanded="true" />
-              </folding>
+        <entry file="uml://JAVA/">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="527.6149781119198" y="901.0">controller.Game</node>
+                <node x="343.1970169655011" y="208.0">logic.brick.MetalBrick</node>
+                <node x="950.8840115951822" y="990.0">gui.GameFactory</node>
+                <node x="1028.5647259064813" y="119.0">gui.BrickControl</node>
+                <node x="797.8840115951822" y="990.0">gui.PositionHandler</node>
+                <node x="479.2803502988345" y="0.0">logic.brick.Brick</node>
+                <node x="580.033576839827" y="990.0">facade.HomeworkTwoFacade</node>
+                <node x="848.4837281119198" y="1089.0">gui.GameApp</node>
+                <node x="204.19701696550112" y="208.0">logic.brick.WoodenBrick</node>
+                <node x="329.2550668155722" y="327.0">logic.visitor.GetsDestroyed</node>
+                <node x="430.3408709690627" y="723.0">logic.level.NullLevel</node>
+                <node x="83.19701696550112" y="208.0">logic.brick.GlassBrick</node>
+                <node x="515.2158709690627" y="327.0">logic.visitor.IsPlayable</node>
+                <node x="204.69701696550112" y="119.0">logic.brick.AbstractBrick</node>
+                <node x="767.6340115951822" y="901.0">gui.GameApp.Types</node>
+                <node x="215.16473460542636" y="545.0">logic.visitor.Visitor</node>
+                <node x="10.5" y="802.0">logic.visitor.IsWinner</node>
+                <node x="424.341154452325" y="426.0">logic.level.PlayableLevel</node>
+                <node x="1039.884011595182" y="901.0">gui.PlayerControl</node>
+                <node x="591.3459759064814" y="624.0">logic.level.Level</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="controller.Game" target="logic.brick.Brick">
+                  <point x="-34.56249999999994" y="-14.5" />
+                  <point x="532.5524781119198" y="881.0" />
+                  <point x="0.0" y="881.0" />
+                  <point x="0.0" y="49.0" />
+                  <point x="482.64398666247087" y="49.0" />
+                  <point x="-33.63636363636364" y="14.5" />
+                </edge>
+                <edge source="logic.level.PlayableLevel" target="logic.level.Level">
+                  <point x="22.3125" y="14.5" />
+                  <point x="506.153654452325" y="495.0" />
+                  <point x="632.8459759064814" y="495.0" />
+                  <point x="632.8459759064814" y="604.0" />
+                  <point x="628.8459759064814" y="604.0" />
+                  <point x="0.0" y="-14.5" />
+                </edge>
+                <edge source="logic.visitor.IsWinner" target="logic.level.PlayableLevel">
+                  <point x="0.0" y="-14.5" />
+                  <point x="57.5" y="777.0" />
+                  <point x="48.02818579666996" y="777.0" />
+                  <point x="48.02818579666996" y="604.0" />
+                  <point x="467.8408709690627" y="604.0" />
+                  <point x="467.8408709690627" y="515.0" />
+                  <point x="461.528654452325" y="515.0" />
+                  <point x="-22.3125" y="14.5" />
+                </edge>
+                <edge source="logic.visitor.IsWinner" target="logic.visitor.Visitor">
+                  <point x="-31.33333333333337" y="-14.5" />
+                  <point x="26.16666666666663" y="777.0" />
+                  <point x="37.02818579666996" y="777.0" />
+                  <point x="37.02818579666996" y="594.0" />
+                  <point x="225.28973460542636" y="594.0" />
+                  <point x="-30.375" y="14.5" />
+                </edge>
+                <edge source="logic.brick.AbstractBrick" target="logic.brick.Brick">
+                  <point x="0.0" y="-14.5" />
+                  <point x="263.6970169655011" y="79.0" />
+                  <point x="502.82580484428905" y="79.0" />
+                  <point x="-13.454545454545453" y="14.5" />
+                </edge>
+                <edge source="logic.visitor.Visitor" target="logic.brick.MetalBrick">
+                  <point x="7.363636363636374" y="-14.5" />
+                  <point x="263.02837096906273" y="485.0" />
+                  <point x="318.7550668155722" y="485.0" />
+                  <point x="318.7550668155722" y="307.0" />
+                  <point x="382.1970169655011" y="307.0" />
+                  <point x="-13.0" y="14.5" />
+                </edge>
+                <edge source="facade.HomeworkTwoFacade" target="controller.Game">
+                  <point x="-66.80000000000007" y="-14.5" />
+                  <point x="596.7335768398269" y="970.0" />
+                  <point x="547.3649781119198" y="970.0" />
+                  <point x="-19.75" y="14.5" />
+                </edge>
+                <edge source="logic.brick.MetalBrick" target="logic.brick.AbstractBrick">
+                  <point x="26.0" y="-14.5" />
+                  <point x="421.1970169655011" y="168.0" />
+                  <point x="312.86368363216775" y="168.0" />
+                  <point x="49.16666666666666" y="14.5" />
+                </edge>
+                <edge source="logic.visitor.GetsDestroyed" target="logic.visitor.Visitor">
+                  <point x="-41.33333333333334" y="14.5" />
+                  <point x="349.9217334822389" y="406.0" />
+                  <point x="379.4134001489055" y="406.0" />
+                  <point x="379.4134001489055" y="495.0" />
+                  <point x="270.3920073326991" y="495.0" />
+                  <point x="14.727272727272748" y="-14.5" />
+                </edge>
+                <edge source="logic.visitor.GetsDestroyed" target="logic.brick.WoodenBrick">
+                  <point x="0.0" y="-14.5" />
+                  <point x="391.2550668155722" y="277.0" />
+                  <point x="278.5720169655011" y="277.0" />
+                  <point x="14.875" y="14.5" />
+                </edge>
+                <edge source="logic.visitor.IsPlayable" target="logic.level.NullLevel">
+                  <point x="14.285714285714278" y="14.5" />
+                  <point x="579.501585254777" y="406.0" />
+                  <point x="580.8459759064814" y="406.0" />
+                  <point x="580.8459759064814" y="683.0" />
+                  <point x="492.69801382620557" y="683.0" />
+                  <point x="13.85714285714289" y="-14.5" />
+                </edge>
+                <edge source="controller.Game" target="logic.level.Level">
+                  <point x="4.937500000000057" y="-14.5" />
+                  <point x="572.0524781119198" y="851.0" />
+                  <point x="628.8459759064814" y="851.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="gui.GameApp" target="gui.PositionHandler">
+                  <point x="0.0" y="-14.5" />
+                  <point x="898.9837281119198" y="1069.0" />
+                  <point x="897.6340115951822" y="1069.0" />
+                  <point x="33.25" y="14.5" />
+                </edge>
+                <edge source="gui.GameFactory" target="gui.GameApp">
+                  <point x="29.5" y="14.5" />
+                  <point x="1039.384011595182" y="1049.0" />
+                  <point x="921.4281725563644" y="1049.0" />
+                  <point x="22.444444444444457" y="-14.5" />
+                </edge>
+                <edge source="logic.brick.WoodenBrick" target="logic.visitor.Visitor">
+                  <point x="-14.875" y="14.5" />
+                  <point x="248.82201696550112" y="307.0" />
+                  <point x="226.6401606618366" y="307.0" />
+                  <point x="226.6401606618366" y="485.0" />
+                  <point x="248.30109824179" y="485.0" />
+                  <point x="-7.363636363636374" y="-14.5" />
+                </edge>
+                <edge source="gui.GameApp" target="gui.GameFactory">
+                  <point x="11.222222222222229" y="-14.5" />
+                  <point x="910.2059503341421" y="1039.0" />
+                  <point x="980.3840115951822" y="1039.0" />
+                  <point x="-29.5" y="14.5" />
+                </edge>
+                <edge source="logic.visitor.Visitor" target="logic.level.NullLevel">
+                  <point x="10.125" y="14.5" />
+                  <point x="266.7064953614158" y="683.0" />
+                  <point x="464.98372811191985" y="683.0" />
+                  <point x="-13.857142857142833" y="-14.5" />
+                </edge>
+                <edge source="logic.level.PlayableLevel" target="logic.brick.Brick">
+                  <point x="5.949999999999989" y="-14.5" />
+                  <point x="489.7911544523249" y="406.0" />
+                  <point x="493.7158709690627" y="406.0" />
+                  <point x="493.7158709690627" y="89.0" />
+                  <point x="509.55307757156174" y="89.0" />
+                  <point x="-6.7272727272727195" y="14.5" />
+                </edge>
+                <edge source="logic.visitor.Visitor" target="logic.brick.GlassBrick">
+                  <point x="-29.45454545454544" y="-14.5" />
+                  <point x="226.21018915088092" y="515.0" />
+                  <point x="104.00951696550112" y="515.0" />
+                  <point x="104.00951696550112" y="307.0" />
+                  <point x="95.82201696550112" y="307.0" />
+                  <point x="-37.875" y="14.5" />
+                </edge>
+                <edge source="logic.visitor.IsWinner" target="logic.level.NullLevel">
+                  <point x="31.333333333333314" y="-14.5" />
+                  <point x="88.83333333333331" y="777.0" />
+                  <point x="454.5908709690627" y="777.0" />
+                  <point x="-24.25" y="14.5" />
+                </edge>
+                <edge source="gui.GameFactory" target="gui.PlayerControl">
+                  <point x="44.25" y="-14.5" />
+                  <point x="1054.134011595182" y="970.0" />
+                  <point x="1069.884011595182" y="970.0" />
+                  <point x="-30.0" y="14.5" />
+                </edge>
+                <edge source="facade.HomeworkTwoFacade" target="logic.level.Level">
+                  <point x="-5.6843418860808015E-14" y="-14.5" />
+                  <point x="663.5335768398269" y="950.0" />
+                  <point x="699.9397259064813" y="950.0" />
+                  <point x="699.9397259064813" y="703.0" />
+                  <point x="658.8459759064814" y="703.0" />
+                  <point x="30.0" y="14.5" />
+                </edge>
+                <edge source="gui.GameApp" target="gui.PlayerControl">
+                  <point x="33.66666666666663" y="-14.5" />
+                  <point x="932.6503947785866" y="1059.0" />
+                  <point x="1129.884011595182" y="1059.0" />
+                  <point x="30.0" y="14.5" />
+                </edge>
+                <edge source="facade.HomeworkTwoFacade" target="logic.level.PlayableLevel">
+                  <point x="33.39999999999992" y="-14.5" />
+                  <point x="696.9335768398269" y="960.0" />
+                  <point x="726.6087281119198" y="960.0" />
+                  <point x="726.6087281119198" y="475.0" />
+                  <point x="535.903654452325" y="475.0" />
+                  <point x="52.0625" y="14.5" />
+                </edge>
+                <edge source="logic.level.PlayableLevel" target="logic.visitor.IsPlayable">
+                  <point x="41.64999999999998" y="-14.5" />
+                  <point x="525.491154452325" y="396.0" />
+                  <point x="536.6444423976341" y="396.0" />
+                  <point x="-28.571428571428555" y="14.5" />
+                </edge>
+                <edge source="logic.level.PlayableLevel" target="logic.brick.WoodenBrick">
+                  <point x="-17.850000000000023" y="-14.5" />
+                  <point x="465.99115445232496" y="406.0" />
+                  <point x="463.7550668155722" y="406.0" />
+                  <point x="463.7550668155722" y="267.0" />
+                  <point x="308.3220169655011" y="267.0" />
+                  <point x="44.625" y="14.5" />
+                </edge>
+                <edge source="logic.level.NullLevel" target="logic.level.Level">
+                  <point x="41.571428571428555" y="-14.5" />
+                  <point x="520.4122995404912" y="703.0" />
+                  <point x="613.8459759064814" y="703.0" />
+                  <point x="-15.0" y="14.5" />
+                </edge>
+                <edge source="logic.visitor.IsPlayable" target="logic.level.PlayableLevel">
+                  <point x="-14.285714285714278" y="14.5" />
+                  <point x="550.9301566833484" y="406.0" />
+                  <point x="537.3911544523249" y="406.0" />
+                  <point x="53.55000000000001" y="-14.5" />
+                </edge>
+                <edge source="logic.level.Level" target="logic.brick.Brick">
+                  <point x="30.0" y="-14.5" />
+                  <point x="658.8459759064814" y="604.0" />
+                  <point x="655.3587281119198" y="604.0" />
+                  <point x="655.3587281119198" y="99.0" />
+                  <point x="523.0076230261072" y="99.0" />
+                  <point x="6.7272727272727195" y="14.5" />
+                </edge>
+                <edge source="logic.visitor.Visitor" target="logic.level.PlayableLevel">
+                  <point x="22.090909090909093" y="-14.5" />
+                  <point x="277.7556436963355" y="505.0" />
+                  <point x="431.778654452325" y="505.0" />
+                  <point x="-52.0625" y="14.5" />
+                </edge>
+                <edge source="logic.visitor.IsPlayable" target="logic.visitor.Visitor">
+                  <point x="0.0" y="14.5" />
+                  <point x="565.2158709690627" y="406.0" />
+                  <point x="566.8587281119198" y="406.0" />
+                  <point x="566.8587281119198" y="525.0" />
+                  <point x="292.4829164236082" y="525.0" />
+                  <point x="36.81818181818181" y="-14.5" />
+                </edge>
+                <edge source="logic.level.PlayableLevel" target="logic.level.NullLevel">
+                  <point x="-7.4375" y="14.5" />
+                  <point x="476.403654452325" y="515.0" />
+                  <point x="490.56516066183656" y="515.0" />
+                  <point x="490.56516066183656" y="673.0" />
+                  <point x="478.8408709690627" y="673.0" />
+                  <point x="0.0" y="-14.5" />
+                </edge>
+                <edge source="logic.level.PlayableLevel" target="logic.brick.GlassBrick">
+                  <point x="-53.55000000000007" y="-14.5" />
+                  <point x="430.2911544523249" y="396.0" />
+                  <point x="139.19701696550112" y="396.0" />
+                  <point x="139.19701696550112" y="307.0" />
+                  <point x="146.32201696550112" y="307.0" />
+                  <point x="12.625" y="14.5" />
+                </edge>
+                <edge source="logic.visitor.Visitor" target="logic.brick.WoodenBrick">
+                  <point x="-14.727272727272748" y="-14.5" />
+                  <point x="240.9374618781536" y="495.0" />
+                  <point x="179.73859824179" y="495.0" />
+                  <point x="179.73859824179" y="307.0" />
+                  <point x="219.07201696550112" y="307.0" />
+                  <point x="-44.625" y="14.5" />
+                </edge>
+                <edge source="logic.level.NullLevel" target="logic.visitor.Visitor">
+                  <point x="-27.714285714285722" y="-14.5" />
+                  <point x="451.12658525477696" y="693.0" />
+                  <point x="255.70649536141582" y="693.0" />
+                  <point x="255.70649536141582" y="594.0" />
+                  <point x="245.53973460542636" y="594.0" />
+                  <point x="-10.125" y="14.5" />
+                </edge>
+                <edge source="logic.level.Level" target="logic.visitor.Visitor">
+                  <point x="-30.0" y="-14.5" />
+                  <point x="598.8459759064814" y="594.0" />
+                  <point x="286.03973460542636" y="594.0" />
+                  <point x="30.375" y="14.5" />
+                </edge>
+                <edge source="logic.visitor.GetsDestroyed" target="logic.brick.MetalBrick">
+                  <point x="41.333333333333314" y="-14.5" />
+                  <point x="432.5884001489055" y="307.0" />
+                  <point x="408.1970169655011" y="307.0" />
+                  <point x="13.0" y="14.5" />
+                </edge>
+                <edge source="controller.Game" target="logic.visitor.IsPlayable">
+                  <point x="34.56250000000006" y="-14.5" />
+                  <point x="601.6774781119198" y="881.0" />
+                  <point x="686.7209759064814" y="881.0" />
+                  <point x="686.7209759064814" y="396.0" />
+                  <point x="608.0730138262056" y="396.0" />
+                  <point x="42.85714285714289" y="14.5" />
+                </edge>
+                <edge source="gui.GameFactory" target="gui.BrickControl">
+                  <point x="14.75" y="-14.5" />
+                  <point x="1024.634011595182" y="970.0" />
+                  <point x="1029.384011595182" y="970.0" />
+                  <point x="1029.384011595182" y="188.0" />
+                  <point x="1057.0647259064813" y="188.0" />
+                  <point x="-28.5" y="14.5" />
+                </edge>
+                <edge source="logic.level.NullLevel" target="logic.brick.Brick">
+                  <point x="-41.571428571428555" y="-14.5" />
+                  <point x="437.2694423976341" y="703.0" />
+                  <point x="62.242471510955625" y="703.0" />
+                  <point x="62.242471510955625" y="59.0" />
+                  <point x="489.3712593897436" y="59.0" />
+                  <point x="-26.909090909090907" y="14.5" />
+                </edge>
+                <edge source="logic.level.PlayableLevel" target="logic.visitor.Visitor">
+                  <point x="-37.1875" y="14.5" />
+                  <point x="446.653654452325" y="515.0" />
+                  <point x="285.1192800599718" y="515.0" />
+                  <point x="29.45454545454544" y="-14.5" />
+                </edge>
+                <edge source="logic.visitor.GetsDestroyed" target="logic.brick.GlassBrick">
+                  <point x="-41.33333333333334" y="-14.5" />
+                  <point x="349.9217334822389" y="287.0" />
+                  <point x="171.57201696550112" y="287.0" />
+                  <point x="37.875" y="14.5" />
+                </edge>
+                <edge source="logic.brick.MetalBrick" target="logic.visitor.Visitor">
+                  <point x="-39.0" y="14.5" />
+                  <point x="356.1970169655011" y="297.0" />
+                  <point x="271.5928502988345" y="297.0" />
+                  <point x="271.5928502988345" y="475.0" />
+                  <point x="255.66473460542636" y="475.0" />
+                  <point x="0.0" y="-14.5" />
+                </edge>
+                <edge source="facade.HomeworkTwoFacade" target="logic.brick.Brick">
+                  <point x="66.7999999999999" y="-14.5" />
+                  <point x="730.3335768398268" y="970.0" />
+                  <point x="737.6087281119198" y="970.0" />
+                  <point x="737.6087281119198" y="89.0" />
+                  <point x="529.73489575338" y="89.0" />
+                  <point x="13.454545454545439" y="14.5" />
+                </edge>
+                <edge source="controller.Game" target="logic.visitor.IsWinner">
+                  <point x="-14.812499999999943" y="-14.5" />
+                  <point x="552.3024781119198" y="861.0" />
+                  <point x="81.0" y="861.0" />
+                  <point x="23.5" y="14.5" />
+                </edge>
+                <edge source="gui.GameApp" target="facade.HomeworkTwoFacade">
+                  <point x="-33.66666666666663" y="-14.5" />
+                  <point x="865.3170614452533" y="1059.0" />
+                  <point x="705.2835768398269" y="1059.0" />
+                  <point x="41.74999999999994" y="14.5" />
+                </edge>
+                <edge source="gui.GameApp" target="gui.BrickControl">
+                  <point x="44.888888888888914" y="-14.5" />
+                  <point x="943.8726170008088" y="1069.0" />
+                  <point x="1170.384011595182" y="1069.0" />
+                  <point x="1170.384011595182" y="188.0" />
+                  <point x="1114.0647259064813" y="188.0" />
+                  <point x="28.5" y="14.5" />
+                </edge>
+                <edge source="gui.BrickControl" target="logic.brick.Brick">
+                  <point x="28.5" y="-14.5" />
+                  <point x="1114.0647259064813" y="59.0" />
+                  <point x="549.9167139351981" y="59.0" />
+                  <point x="33.636363636363626" y="14.5" />
+                </edge>
+                <edge source="logic.brick.Brick" target="logic.visitor.Visitor">
+                  <point x="-20.181818181818187" y="14.5" />
+                  <point x="496.0985321170163" y="69.0" />
+                  <point x="72.69701696550112" y="69.0" />
+                  <point x="72.69701696550112" y="525.0" />
+                  <point x="218.84655278724455" y="525.0" />
+                  <point x="-36.81818181818181" y="-14.5" />
+                </edge>
+                <edge source="gui.GameFactory" target="logic.brick.Brick">
+                  <point x="-14.75" y="-14.5" />
+                  <point x="995.1340115951822" y="970.0" />
+                  <point x="1004.3840115951822" y="970.0" />
+                  <point x="1004.3840115951822" y="79.0" />
+                  <point x="536.4621684806527" y="79.0" />
+                  <point x="20.181818181818187" y="14.5" />
+                </edge>
+                <edge source="logic.brick.WoodenBrick" target="logic.brick.AbstractBrick">
+                  <point x="-29.75" y="-14.5" />
+                  <point x="233.94701696550112" y="188.0" />
+                  <point x="253.86368363216775" y="188.0" />
+                  <point x="-9.833333333333343" y="14.5" />
+                </edge>
+                <edge source="logic.level.PlayableLevel" target="logic.visitor.GetsDestroyed">
+                  <point x="-41.650000000000034" y="-14.5" />
+                  <point x="442.1911544523249" y="386.0" />
+                  <point x="391.2550668155722" y="386.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="gui.GameFactory" target="gui.GameApp.Types">
+                  <point x="-44.25" y="-14.5" />
+                  <point x="965.6340115951822" y="970.0" />
+                  <point x="826.8840115951822" y="970.0" />
+                  <point x="19.75" y="14.5" />
+                </edge>
+                <edge source="controller.Game" target="logic.level.NullLevel">
+                  <point x="-4.937499999999943" y="-14.5" />
+                  <point x="562.1774781119198" y="851.0" />
+                  <point x="503.0908709690627" y="851.0" />
+                  <point x="24.25" y="14.5" />
+                </edge>
+                <edge source="gui.GameApp" target="gui.GameApp.Types">
+                  <point x="-22.444444444444457" y="-14.5" />
+                  <point x="876.5392836674755" y="1049.0" />
+                  <point x="787.3840115951822" y="1049.0" />
+                  <point x="-19.75" y="14.5" />
+                </edge>
+                <edge source="logic.brick.GlassBrick" target="logic.brick.AbstractBrick">
+                  <point x="25.24999999999997" y="-14.5" />
+                  <point x="158.94701696550112" y="178.0" />
+                  <point x="234.19701696550112" y="178.0" />
+                  <point x="-29.5" y="14.5" />
+                </edge>
+                <edge source="logic.brick.GlassBrick" target="logic.visitor.Visitor">
+                  <point x="-12.625" y="14.5" />
+                  <point x="121.07201696550112" y="307.0" />
+                  <point x="128.19701696550112" y="307.0" />
+                  <point x="128.19701696550112" y="505.0" />
+                  <point x="233.57382551451724" y="505.0" />
+                  <point x="-22.090909090909122" y="-14.5" />
+                </edge>
+                <edge source="logic.level.PlayableLevel" target="logic.brick.MetalBrick">
+                  <point x="-5.9500000000000455" y="-14.5" />
+                  <point x="477.89115445232494" y="406.0" />
+                  <point x="476.4658709690627" y="406.0" />
+                  <point x="476.4658709690627" y="257.0" />
+                  <point x="434.1970169655011" y="257.0" />
+                  <point x="39.0" y="14.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.5" x="-97.5" y="427.0" />
+              <SelectedNodes />
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -206,11 +630,11 @@
         <option value="$PROJECT_DIR$/src/main/java/facade/HomeworkTwoFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/level/NullLevel.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/PositionHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/GameFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/GlassBrickControl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/logic/level/PlayableLevel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/BrickControl.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/GameApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/BrickControl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/level/PlayableLevel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/GameFactory.java" />
       </list>
     </option>
   </component>
@@ -306,6 +730,30 @@
               <item name="breakout" type="b2602c69:ProjectViewProjectNode" />
               <item name="cc3002-breakout" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breakout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cc3002-breakout" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breakout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cc3002-breakout" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="textures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breakout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cc3002-breakout" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -325,7 +773,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545183566426" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545192524959" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/logic" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -457,7 +905,7 @@
       <workItem from="1544400520454" duration="7511000" />
       <workItem from="1544474422975" duration="14836000" />
       <workItem from="1544794393270" duration="19339000" />
-      <workItem from="1545085573717" duration="30285000" />
+      <workItem from="1545085573717" duration="31998000" />
     </task>
     <task id="LOCAL-00001" summary="To Do:&#10;Finish readme&#10;Complete test">
       <created>1543029446664</created>
@@ -613,7 +1061,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545174434192</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="To do:&#10;- Winning screen&#10;- Add bar asset">
+      <created>1545183644448</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1545183644448</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -649,7 +1104,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102725000" />
+    <option name="totallyTimeSpent" value="104438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -664,7 +1119,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.09016393" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.08852459" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -704,7 +1159,8 @@
     <MESSAGE value="To do:&#10;- Implement brick parser&#10;- Implement initGameVars" />
     <MESSAGE value="To do:&#10;- Implement initGameVars&#10;- Implement next level" />
     <MESSAGE value="To do:&#10;- Winning screen&#10;- Add assets" />
-    <option name="LAST_COMMIT_MESSAGE" value="To do:&#10;- Winning screen&#10;- Add assets" />
+    <MESSAGE value="To do:&#10;- Winning screen&#10;- Add bar asset" />
+    <option name="LAST_COMMIT_MESSAGE" value="To do:&#10;- Winning screen&#10;- Add bar asset" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test/java/Tarea2Test.java" />
@@ -956,16 +1412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/GameFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="84" column="42" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui/GlassBrickControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -980,28 +1426,468 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="527.6149781119198" y="901.0">controller.Game</node>
+            <node x="343.1970169655011" y="208.0">logic.brick.MetalBrick</node>
+            <node x="950.8840115951822" y="990.0">gui.GameFactory</node>
+            <node x="1028.5647259064813" y="119.0">gui.BrickControl</node>
+            <node x="797.8840115951822" y="990.0">gui.PositionHandler</node>
+            <node x="479.2803502988345" y="0.0">logic.brick.Brick</node>
+            <node x="580.033576839827" y="990.0">facade.HomeworkTwoFacade</node>
+            <node x="848.4837281119198" y="1089.0">gui.GameApp</node>
+            <node x="204.19701696550112" y="208.0">logic.brick.WoodenBrick</node>
+            <node x="329.2550668155722" y="327.0">logic.visitor.GetsDestroyed</node>
+            <node x="430.3408709690627" y="723.0">logic.level.NullLevel</node>
+            <node x="83.19701696550112" y="208.0">logic.brick.GlassBrick</node>
+            <node x="515.2158709690627" y="327.0">logic.visitor.IsPlayable</node>
+            <node x="204.69701696550112" y="119.0">logic.brick.AbstractBrick</node>
+            <node x="767.6340115951822" y="901.0">gui.GameApp.Types</node>
+            <node x="215.16473460542636" y="545.0">logic.visitor.Visitor</node>
+            <node x="10.5" y="802.0">logic.visitor.IsWinner</node>
+            <node x="424.341154452325" y="426.0">logic.level.PlayableLevel</node>
+            <node x="1039.884011595182" y="901.0">gui.PlayerControl</node>
+            <node x="591.3459759064814" y="624.0">logic.level.Level</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="controller.Game" target="logic.brick.Brick">
+              <point x="-34.56249999999994" y="-14.5" />
+              <point x="532.5524781119198" y="881.0" />
+              <point x="0.0" y="881.0" />
+              <point x="0.0" y="49.0" />
+              <point x="482.64398666247087" y="49.0" />
+              <point x="-33.63636363636364" y="14.5" />
+            </edge>
+            <edge source="logic.level.PlayableLevel" target="logic.level.Level">
+              <point x="22.3125" y="14.5" />
+              <point x="506.153654452325" y="495.0" />
+              <point x="632.8459759064814" y="495.0" />
+              <point x="632.8459759064814" y="604.0" />
+              <point x="628.8459759064814" y="604.0" />
+              <point x="0.0" y="-14.5" />
+            </edge>
+            <edge source="logic.visitor.IsWinner" target="logic.level.PlayableLevel">
+              <point x="0.0" y="-14.5" />
+              <point x="57.5" y="777.0" />
+              <point x="48.02818579666996" y="777.0" />
+              <point x="48.02818579666996" y="604.0" />
+              <point x="467.8408709690627" y="604.0" />
+              <point x="467.8408709690627" y="515.0" />
+              <point x="461.528654452325" y="515.0" />
+              <point x="-22.3125" y="14.5" />
+            </edge>
+            <edge source="logic.visitor.IsWinner" target="logic.visitor.Visitor">
+              <point x="-31.33333333333337" y="-14.5" />
+              <point x="26.16666666666663" y="777.0" />
+              <point x="37.02818579666996" y="777.0" />
+              <point x="37.02818579666996" y="594.0" />
+              <point x="225.28973460542636" y="594.0" />
+              <point x="-30.375" y="14.5" />
+            </edge>
+            <edge source="logic.brick.AbstractBrick" target="logic.brick.Brick">
+              <point x="0.0" y="-14.5" />
+              <point x="263.6970169655011" y="79.0" />
+              <point x="502.82580484428905" y="79.0" />
+              <point x="-13.454545454545453" y="14.5" />
+            </edge>
+            <edge source="logic.visitor.Visitor" target="logic.brick.MetalBrick">
+              <point x="7.363636363636374" y="-14.5" />
+              <point x="263.02837096906273" y="485.0" />
+              <point x="318.7550668155722" y="485.0" />
+              <point x="318.7550668155722" y="307.0" />
+              <point x="382.1970169655011" y="307.0" />
+              <point x="-13.0" y="14.5" />
+            </edge>
+            <edge source="facade.HomeworkTwoFacade" target="controller.Game">
+              <point x="-66.80000000000007" y="-14.5" />
+              <point x="596.7335768398269" y="970.0" />
+              <point x="547.3649781119198" y="970.0" />
+              <point x="-19.75" y="14.5" />
+            </edge>
+            <edge source="logic.brick.MetalBrick" target="logic.brick.AbstractBrick">
+              <point x="26.0" y="-14.5" />
+              <point x="421.1970169655011" y="168.0" />
+              <point x="312.86368363216775" y="168.0" />
+              <point x="49.16666666666666" y="14.5" />
+            </edge>
+            <edge source="logic.visitor.GetsDestroyed" target="logic.visitor.Visitor">
+              <point x="-41.33333333333334" y="14.5" />
+              <point x="349.9217334822389" y="406.0" />
+              <point x="379.4134001489055" y="406.0" />
+              <point x="379.4134001489055" y="495.0" />
+              <point x="270.3920073326991" y="495.0" />
+              <point x="14.727272727272748" y="-14.5" />
+            </edge>
+            <edge source="logic.visitor.GetsDestroyed" target="logic.brick.WoodenBrick">
+              <point x="0.0" y="-14.5" />
+              <point x="391.2550668155722" y="277.0" />
+              <point x="278.5720169655011" y="277.0" />
+              <point x="14.875" y="14.5" />
+            </edge>
+            <edge source="logic.visitor.IsPlayable" target="logic.level.NullLevel">
+              <point x="14.285714285714278" y="14.5" />
+              <point x="579.501585254777" y="406.0" />
+              <point x="580.8459759064814" y="406.0" />
+              <point x="580.8459759064814" y="683.0" />
+              <point x="492.69801382620557" y="683.0" />
+              <point x="13.85714285714289" y="-14.5" />
+            </edge>
+            <edge source="controller.Game" target="logic.level.Level">
+              <point x="4.937500000000057" y="-14.5" />
+              <point x="572.0524781119198" y="851.0" />
+              <point x="628.8459759064814" y="851.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="gui.GameApp" target="gui.PositionHandler">
+              <point x="0.0" y="-14.5" />
+              <point x="898.9837281119198" y="1069.0" />
+              <point x="897.6340115951822" y="1069.0" />
+              <point x="33.25" y="14.5" />
+            </edge>
+            <edge source="gui.GameFactory" target="gui.GameApp">
+              <point x="29.5" y="14.5" />
+              <point x="1039.384011595182" y="1049.0" />
+              <point x="921.4281725563644" y="1049.0" />
+              <point x="22.444444444444457" y="-14.5" />
+            </edge>
+            <edge source="logic.brick.WoodenBrick" target="logic.visitor.Visitor">
+              <point x="-14.875" y="14.5" />
+              <point x="248.82201696550112" y="307.0" />
+              <point x="226.6401606618366" y="307.0" />
+              <point x="226.6401606618366" y="485.0" />
+              <point x="248.30109824179" y="485.0" />
+              <point x="-7.363636363636374" y="-14.5" />
+            </edge>
+            <edge source="gui.GameApp" target="gui.GameFactory">
+              <point x="11.222222222222229" y="-14.5" />
+              <point x="910.2059503341421" y="1039.0" />
+              <point x="980.3840115951822" y="1039.0" />
+              <point x="-29.5" y="14.5" />
+            </edge>
+            <edge source="logic.visitor.Visitor" target="logic.level.NullLevel">
+              <point x="10.125" y="14.5" />
+              <point x="266.7064953614158" y="683.0" />
+              <point x="464.98372811191985" y="683.0" />
+              <point x="-13.857142857142833" y="-14.5" />
+            </edge>
+            <edge source="logic.level.PlayableLevel" target="logic.brick.Brick">
+              <point x="5.949999999999989" y="-14.5" />
+              <point x="489.7911544523249" y="406.0" />
+              <point x="493.7158709690627" y="406.0" />
+              <point x="493.7158709690627" y="89.0" />
+              <point x="509.55307757156174" y="89.0" />
+              <point x="-6.7272727272727195" y="14.5" />
+            </edge>
+            <edge source="logic.visitor.Visitor" target="logic.brick.GlassBrick">
+              <point x="-29.45454545454544" y="-14.5" />
+              <point x="226.21018915088092" y="515.0" />
+              <point x="104.00951696550112" y="515.0" />
+              <point x="104.00951696550112" y="307.0" />
+              <point x="95.82201696550112" y="307.0" />
+              <point x="-37.875" y="14.5" />
+            </edge>
+            <edge source="logic.visitor.IsWinner" target="logic.level.NullLevel">
+              <point x="31.333333333333314" y="-14.5" />
+              <point x="88.83333333333331" y="777.0" />
+              <point x="454.5908709690627" y="777.0" />
+              <point x="-24.25" y="14.5" />
+            </edge>
+            <edge source="gui.GameFactory" target="gui.PlayerControl">
+              <point x="44.25" y="-14.5" />
+              <point x="1054.134011595182" y="970.0" />
+              <point x="1069.884011595182" y="970.0" />
+              <point x="-30.0" y="14.5" />
+            </edge>
+            <edge source="facade.HomeworkTwoFacade" target="logic.level.Level">
+              <point x="-5.6843418860808015E-14" y="-14.5" />
+              <point x="663.5335768398269" y="950.0" />
+              <point x="699.9397259064813" y="950.0" />
+              <point x="699.9397259064813" y="703.0" />
+              <point x="658.8459759064814" y="703.0" />
+              <point x="30.0" y="14.5" />
+            </edge>
+            <edge source="gui.GameApp" target="gui.PlayerControl">
+              <point x="33.66666666666663" y="-14.5" />
+              <point x="932.6503947785866" y="1059.0" />
+              <point x="1129.884011595182" y="1059.0" />
+              <point x="30.0" y="14.5" />
+            </edge>
+            <edge source="facade.HomeworkTwoFacade" target="logic.level.PlayableLevel">
+              <point x="33.39999999999992" y="-14.5" />
+              <point x="696.9335768398269" y="960.0" />
+              <point x="726.6087281119198" y="960.0" />
+              <point x="726.6087281119198" y="475.0" />
+              <point x="535.903654452325" y="475.0" />
+              <point x="52.0625" y="14.5" />
+            </edge>
+            <edge source="logic.level.PlayableLevel" target="logic.visitor.IsPlayable">
+              <point x="41.64999999999998" y="-14.5" />
+              <point x="525.491154452325" y="396.0" />
+              <point x="536.6444423976341" y="396.0" />
+              <point x="-28.571428571428555" y="14.5" />
+            </edge>
+            <edge source="logic.level.PlayableLevel" target="logic.brick.WoodenBrick">
+              <point x="-17.850000000000023" y="-14.5" />
+              <point x="465.99115445232496" y="406.0" />
+              <point x="463.7550668155722" y="406.0" />
+              <point x="463.7550668155722" y="267.0" />
+              <point x="308.3220169655011" y="267.0" />
+              <point x="44.625" y="14.5" />
+            </edge>
+            <edge source="logic.level.NullLevel" target="logic.level.Level">
+              <point x="41.571428571428555" y="-14.5" />
+              <point x="520.4122995404912" y="703.0" />
+              <point x="613.8459759064814" y="703.0" />
+              <point x="-15.0" y="14.5" />
+            </edge>
+            <edge source="logic.visitor.IsPlayable" target="logic.level.PlayableLevel">
+              <point x="-14.285714285714278" y="14.5" />
+              <point x="550.9301566833484" y="406.0" />
+              <point x="537.3911544523249" y="406.0" />
+              <point x="53.55000000000001" y="-14.5" />
+            </edge>
+            <edge source="logic.level.Level" target="logic.brick.Brick">
+              <point x="30.0" y="-14.5" />
+              <point x="658.8459759064814" y="604.0" />
+              <point x="655.3587281119198" y="604.0" />
+              <point x="655.3587281119198" y="99.0" />
+              <point x="523.0076230261072" y="99.0" />
+              <point x="6.7272727272727195" y="14.5" />
+            </edge>
+            <edge source="logic.visitor.Visitor" target="logic.level.PlayableLevel">
+              <point x="22.090909090909093" y="-14.5" />
+              <point x="277.7556436963355" y="505.0" />
+              <point x="431.778654452325" y="505.0" />
+              <point x="-52.0625" y="14.5" />
+            </edge>
+            <edge source="logic.visitor.IsPlayable" target="logic.visitor.Visitor">
+              <point x="0.0" y="14.5" />
+              <point x="565.2158709690627" y="406.0" />
+              <point x="566.8587281119198" y="406.0" />
+              <point x="566.8587281119198" y="525.0" />
+              <point x="292.4829164236082" y="525.0" />
+              <point x="36.81818181818181" y="-14.5" />
+            </edge>
+            <edge source="logic.level.PlayableLevel" target="logic.level.NullLevel">
+              <point x="-7.4375" y="14.5" />
+              <point x="476.403654452325" y="515.0" />
+              <point x="490.56516066183656" y="515.0" />
+              <point x="490.56516066183656" y="673.0" />
+              <point x="478.8408709690627" y="673.0" />
+              <point x="0.0" y="-14.5" />
+            </edge>
+            <edge source="logic.level.PlayableLevel" target="logic.brick.GlassBrick">
+              <point x="-53.55000000000007" y="-14.5" />
+              <point x="430.2911544523249" y="396.0" />
+              <point x="139.19701696550112" y="396.0" />
+              <point x="139.19701696550112" y="307.0" />
+              <point x="146.32201696550112" y="307.0" />
+              <point x="12.625" y="14.5" />
+            </edge>
+            <edge source="logic.visitor.Visitor" target="logic.brick.WoodenBrick">
+              <point x="-14.727272727272748" y="-14.5" />
+              <point x="240.9374618781536" y="495.0" />
+              <point x="179.73859824179" y="495.0" />
+              <point x="179.73859824179" y="307.0" />
+              <point x="219.07201696550112" y="307.0" />
+              <point x="-44.625" y="14.5" />
+            </edge>
+            <edge source="logic.level.NullLevel" target="logic.visitor.Visitor">
+              <point x="-27.714285714285722" y="-14.5" />
+              <point x="451.12658525477696" y="693.0" />
+              <point x="255.70649536141582" y="693.0" />
+              <point x="255.70649536141582" y="594.0" />
+              <point x="245.53973460542636" y="594.0" />
+              <point x="-10.125" y="14.5" />
+            </edge>
+            <edge source="logic.level.Level" target="logic.visitor.Visitor">
+              <point x="-30.0" y="-14.5" />
+              <point x="598.8459759064814" y="594.0" />
+              <point x="286.03973460542636" y="594.0" />
+              <point x="30.375" y="14.5" />
+            </edge>
+            <edge source="logic.visitor.GetsDestroyed" target="logic.brick.MetalBrick">
+              <point x="41.333333333333314" y="-14.5" />
+              <point x="432.5884001489055" y="307.0" />
+              <point x="408.1970169655011" y="307.0" />
+              <point x="13.0" y="14.5" />
+            </edge>
+            <edge source="controller.Game" target="logic.visitor.IsPlayable">
+              <point x="34.56250000000006" y="-14.5" />
+              <point x="601.6774781119198" y="881.0" />
+              <point x="686.7209759064814" y="881.0" />
+              <point x="686.7209759064814" y="396.0" />
+              <point x="608.0730138262056" y="396.0" />
+              <point x="42.85714285714289" y="14.5" />
+            </edge>
+            <edge source="gui.GameFactory" target="gui.BrickControl">
+              <point x="14.75" y="-14.5" />
+              <point x="1024.634011595182" y="970.0" />
+              <point x="1029.384011595182" y="970.0" />
+              <point x="1029.384011595182" y="188.0" />
+              <point x="1057.0647259064813" y="188.0" />
+              <point x="-28.5" y="14.5" />
+            </edge>
+            <edge source="logic.level.NullLevel" target="logic.brick.Brick">
+              <point x="-41.571428571428555" y="-14.5" />
+              <point x="437.2694423976341" y="703.0" />
+              <point x="62.242471510955625" y="703.0" />
+              <point x="62.242471510955625" y="59.0" />
+              <point x="489.3712593897436" y="59.0" />
+              <point x="-26.909090909090907" y="14.5" />
+            </edge>
+            <edge source="logic.level.PlayableLevel" target="logic.visitor.Visitor">
+              <point x="-37.1875" y="14.5" />
+              <point x="446.653654452325" y="515.0" />
+              <point x="285.1192800599718" y="515.0" />
+              <point x="29.45454545454544" y="-14.5" />
+            </edge>
+            <edge source="logic.visitor.GetsDestroyed" target="logic.brick.GlassBrick">
+              <point x="-41.33333333333334" y="-14.5" />
+              <point x="349.9217334822389" y="287.0" />
+              <point x="171.57201696550112" y="287.0" />
+              <point x="37.875" y="14.5" />
+            </edge>
+            <edge source="logic.brick.MetalBrick" target="logic.visitor.Visitor">
+              <point x="-39.0" y="14.5" />
+              <point x="356.1970169655011" y="297.0" />
+              <point x="271.5928502988345" y="297.0" />
+              <point x="271.5928502988345" y="475.0" />
+              <point x="255.66473460542636" y="475.0" />
+              <point x="0.0" y="-14.5" />
+            </edge>
+            <edge source="facade.HomeworkTwoFacade" target="logic.brick.Brick">
+              <point x="66.7999999999999" y="-14.5" />
+              <point x="730.3335768398268" y="970.0" />
+              <point x="737.6087281119198" y="970.0" />
+              <point x="737.6087281119198" y="89.0" />
+              <point x="529.73489575338" y="89.0" />
+              <point x="13.454545454545439" y="14.5" />
+            </edge>
+            <edge source="controller.Game" target="logic.visitor.IsWinner">
+              <point x="-14.812499999999943" y="-14.5" />
+              <point x="552.3024781119198" y="861.0" />
+              <point x="81.0" y="861.0" />
+              <point x="23.5" y="14.5" />
+            </edge>
+            <edge source="gui.GameApp" target="facade.HomeworkTwoFacade">
+              <point x="-33.66666666666663" y="-14.5" />
+              <point x="865.3170614452533" y="1059.0" />
+              <point x="705.2835768398269" y="1059.0" />
+              <point x="41.74999999999994" y="14.5" />
+            </edge>
+            <edge source="gui.GameApp" target="gui.BrickControl">
+              <point x="44.888888888888914" y="-14.5" />
+              <point x="943.8726170008088" y="1069.0" />
+              <point x="1170.384011595182" y="1069.0" />
+              <point x="1170.384011595182" y="188.0" />
+              <point x="1114.0647259064813" y="188.0" />
+              <point x="28.5" y="14.5" />
+            </edge>
+            <edge source="gui.BrickControl" target="logic.brick.Brick">
+              <point x="28.5" y="-14.5" />
+              <point x="1114.0647259064813" y="59.0" />
+              <point x="549.9167139351981" y="59.0" />
+              <point x="33.636363636363626" y="14.5" />
+            </edge>
+            <edge source="logic.brick.Brick" target="logic.visitor.Visitor">
+              <point x="-20.181818181818187" y="14.5" />
+              <point x="496.0985321170163" y="69.0" />
+              <point x="72.69701696550112" y="69.0" />
+              <point x="72.69701696550112" y="525.0" />
+              <point x="218.84655278724455" y="525.0" />
+              <point x="-36.81818181818181" y="-14.5" />
+            </edge>
+            <edge source="gui.GameFactory" target="logic.brick.Brick">
+              <point x="-14.75" y="-14.5" />
+              <point x="995.1340115951822" y="970.0" />
+              <point x="1004.3840115951822" y="970.0" />
+              <point x="1004.3840115951822" y="79.0" />
+              <point x="536.4621684806527" y="79.0" />
+              <point x="20.181818181818187" y="14.5" />
+            </edge>
+            <edge source="logic.brick.WoodenBrick" target="logic.brick.AbstractBrick">
+              <point x="-29.75" y="-14.5" />
+              <point x="233.94701696550112" y="188.0" />
+              <point x="253.86368363216775" y="188.0" />
+              <point x="-9.833333333333343" y="14.5" />
+            </edge>
+            <edge source="logic.level.PlayableLevel" target="logic.visitor.GetsDestroyed">
+              <point x="-41.650000000000034" y="-14.5" />
+              <point x="442.1911544523249" y="386.0" />
+              <point x="391.2550668155722" y="386.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="gui.GameFactory" target="gui.GameApp.Types">
+              <point x="-44.25" y="-14.5" />
+              <point x="965.6340115951822" y="970.0" />
+              <point x="826.8840115951822" y="970.0" />
+              <point x="19.75" y="14.5" />
+            </edge>
+            <edge source="controller.Game" target="logic.level.NullLevel">
+              <point x="-4.937499999999943" y="-14.5" />
+              <point x="562.1774781119198" y="851.0" />
+              <point x="503.0908709690627" y="851.0" />
+              <point x="24.25" y="14.5" />
+            </edge>
+            <edge source="gui.GameApp" target="gui.GameApp.Types">
+              <point x="-22.444444444444457" y="-14.5" />
+              <point x="876.5392836674755" y="1049.0" />
+              <point x="787.3840115951822" y="1049.0" />
+              <point x="-19.75" y="14.5" />
+            </edge>
+            <edge source="logic.brick.GlassBrick" target="logic.brick.AbstractBrick">
+              <point x="25.24999999999997" y="-14.5" />
+              <point x="158.94701696550112" y="178.0" />
+              <point x="234.19701696550112" y="178.0" />
+              <point x="-29.5" y="14.5" />
+            </edge>
+            <edge source="logic.brick.GlassBrick" target="logic.visitor.Visitor">
+              <point x="-12.625" y="14.5" />
+              <point x="121.07201696550112" y="307.0" />
+              <point x="128.19701696550112" y="307.0" />
+              <point x="128.19701696550112" y="505.0" />
+              <point x="233.57382551451724" y="505.0" />
+              <point x="-22.090909090909122" y="-14.5" />
+            </edge>
+            <edge source="logic.level.PlayableLevel" target="logic.brick.MetalBrick">
+              <point x="-5.9500000000000455" y="-14.5" />
+              <point x="477.89115445232494" y="406.0" />
+              <point x="476.4658709690627" y="406.0" />
+              <point x="476.4658709690627" y="257.0" />
+              <point x="434.1970169655011" y="257.0" />
+              <point x="39.0" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5" x="-97.5" y="427.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logic/level/PlayableLevel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="93" column="17" lean-forward="true" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
+        <state relative-caret-position="179">
+          <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2725#2726#0" expanded="true" />
-            <element signature="e#2758#2759#0" expanded="true" />
-            <element signature="e#3236#3237#0" expanded="true" />
-            <element signature="e#3269#3270#0" expanded="true" />
-            <element signature="e#3326#3327#0" expanded="true" />
-            <element signature="e#3374#3375#0" expanded="true" />
-            <element signature="e#3424#3425#0" expanded="true" />
-            <element signature="e#3460#3461#0" expanded="true" />
+            <element signature="e#2422#2423#0" expanded="true" />
+            <element signature="e#2492#2493#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui/BrickControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+        <state relative-caret-position="324">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#653#654#0" expanded="true" />
@@ -1018,14 +1904,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui/GameApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="138" column="16" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
+        <state relative-caret-position="514">
+          <caret line="138" selection-start-line="138" selection-end-line="138" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2855#2856#0" expanded="true" />
             <element signature="e#2897#2898#0" expanded="true" />
             <element signature="e#8177#8178#0" expanded="true" />
             <element signature="e#8205#8206#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/GameFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

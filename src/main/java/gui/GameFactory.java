@@ -10,8 +10,6 @@ import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
 import com.almasb.fxgl.physics.box2d.dynamics.FixtureDef;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import logic.brick.Brick;
 
 final class GameFactory implements EntityFactory {
@@ -31,14 +29,13 @@ final class GameFactory implements EntityFactory {
         return Entities.builder()
                 .at(x - BAR_WIDTH / 2.0, y)
                 .type(GameApp.Types.PLAYER)
-                .viewFromNodeWithBBox(new Rectangle(BAR_WIDTH, BAR_HEIGHT, Color.BLUE))
+                .viewFromTextureWithBBox("bar.png")
                 .with(barPhysics, new PlayerControl(), new CollidableComponent(true))
                 .build();
     }
 
     static Entity newBackground(){
         return Entities.builder()
-                //.viewFromNode(new Rectangle(600, 600, Color.BLACK))
                 .viewFromTexture("background.jpg")
                 .renderLayer(RenderLayer.BACKGROUND)
                 .build();
