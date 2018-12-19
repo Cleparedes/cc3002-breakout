@@ -15,10 +15,7 @@ import logic.brick.Brick;
 final class GameFactory implements EntityFactory {
 
     private static final int BAR_WIDTH = 100;
-    private static final int BAR_HEIGHT = 30;
     private static final int BALL_SIZE = 10;
-    private static final int BRICK_WIDTH = 60;
-    private static final int BRICK_HEIGHT = 25;
     private static final int BALL_SPEED = 5*60;
 
 
