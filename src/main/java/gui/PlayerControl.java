@@ -29,4 +29,8 @@ public class PlayerControl extends Component {
     public void right(){
         velocity.set(BAR_SPEED, 0);
     }
+
+    public double getVelocityX(){
+        return velocity.x;
+    }
 }

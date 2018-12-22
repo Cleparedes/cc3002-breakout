@@ -24,11 +24,11 @@ class BrickControl extends Component {
             entity.removeFromWorld();
     }
 
-    public boolean isGlassBrick(){
+    boolean isGlassBrick(){
         return brick.isGlassBrick();
     }
 
-    public boolean isWoodenBrick(){
+    boolean isWoodenBrick(){
         return brick.isWoodenBrick();
     }
 

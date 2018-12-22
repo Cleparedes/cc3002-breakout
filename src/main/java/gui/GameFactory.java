@@ -15,8 +15,8 @@ import logic.brick.Brick;
 final class GameFactory implements EntityFactory {
 
     private static final int BAR_WIDTH = 100;
+    private static final int BAR_HEIGHT = 30;
     private static final int BALL_SIZE = 10;
-    private static final int BALL_SPEED = 5*60;
 
 
     static Entity newBar(double x, double y){
@@ -42,14 +42,14 @@ final class GameFactory implements EntityFactory {
         PhysicsComponent ballPhysics = new PhysicsComponent();
         ballPhysics.setBodyType(BodyType.DYNAMIC);
         ballPhysics.setFixtureDef(new FixtureDef().restitution(1f).density(0.1f));
-        ballPhysics.setOnPhysicsInitialized(() -> ballPhysics.setLinearVelocity(BALL_SPEED, -BALL_SPEED));
+        ballPhysics.setOnPhysicsInitialized(() -> ballPhysics.setLinearVelocity(0, 0));
 
         return Entities.builder()
-                .at(x - BALL_SIZE / 2.0, y - BALL_SIZE / 2.0)
+                .at(x + BAR_WIDTH / 2.0 - BALL_SIZE / 2.0, y - BALL_SIZE*2 - 1)
                 .type(GameApp.Types.BALL)
                 .bbox(new HitBox("Ball", BoundingShape.circle(BALL_SIZE)))
                 .viewFromTexture("ball.png")
-                .with(ballPhysics, new CollidableComponent(true))
+                .with(ballPhysics, new BallControl(), new CollidableComponent(true))
                 .build();
     }
 

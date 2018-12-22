@@ -35,22 +35,14 @@ public class GameApp extends GameApplication {
 
     @Override
     protected void initGame(){
-        Entity background = newBackground();
-        Entity bar = newBar(getWidth() * 0.5, getHeight() * 0.9);
-        Entity ball = newBall(getWidth() * 0.5, getHeight() * 0.8);
-        Entity walls = newWalls();
+        hw2 = new HomeworkTwoFacade();
 
-        hw2.setCurrentLevel(hw2.newLevelWithBricksFull("Nivel 1",10,0.5, 0.5, 0));
-        PositionHandler ph = new PositionHandler(getWidth(), getHeight());
+        hw2.setCurrentLevel(hw2.newLevelWithBricksFull("Nivel 1",20,0.5, 0.5, 0));
+        hw2.addPlayingLevel(hw2.newLevelWithBricksFull("Nivel 2", 20, 0.8, 1, 0));
 
-        hw2.getBricks().forEach(brick -> {
-            int[] p = ph.getPosition();
-            getGameWorld().addEntity(newBrick(p[0], p[1], brick));
-        });
+        placeEntities();
 
         getGameState().setValue("name", hw2.getLevelName());
-
-        getGameWorld().addEntities(background, bar, ball, walls);
     }
 
     @Override
@@ -73,37 +65,49 @@ public class GameApp extends GameApplication {
             }
         }, KeyCode.A);
 
-        input.addAction(new UserAction("Reset Ball") {
+        input.addAction(new UserAction("Shoot ball") {
             @Override
             protected void onAction() {
-                getGameWorld().getEntitiesByType(Types.BALL)
-                        .forEach(Entity::removeFromWorld);
-                Entity ball = newBall(getWidth() * 0.5, getHeight() * 0.8);
-                getGameWorld().addEntity(ball);
+                getGameWorld()
+                        .getEntitiesByType(Types.BALL)
+                        .forEach(ball -> ball.getComponent(BallControl.class).release());
             }
-        }, KeyCode.R);
+        }, KeyCode.SPACE);
 
         input.addAction(new UserAction("Reset Game") {
             @Override
             protected void onAction() {
+                getGameWorld().clear();
                 initGame();
+
+                getGameState().setValue("name", hw2.getLevelName());
+                getGameState().setValue("lives", hw2.getBallsLeft());
+                getGameState().setValue("score", hw2.getCurrentPoints());
+                getGameState().setValue("levelScore", hw2.getCurrentLevelPoints());
+                getGameState().setValue("levelsPlayed", 0);
+                getGameState().setValue("remainingLevels", 1);
             }
-        }, KeyCode.F);
+        }, KeyCode.R);
     }
 
     @Override
     protected void initPhysics(){
         getPhysicsWorld().setGravity(0, 0);
 
+        getPhysicsWorld().addCollisionHandler(new CollisionHandler(Types.PLAYER, Types.BALL) {
+            @Override
+            protected void onHitBoxTrigger(Entity bar, Entity ball, HitBox boxBar, HitBox boxBall) {
+                ball.getComponent(BallControl.class).onHit();
+            }
+        });
+
         getPhysicsWorld().addCollisionHandler(new CollisionHandler(Types.BALL, Types.WALL) {
             @Override
             protected void onHitBoxTrigger(Entity ball, Entity wall, HitBox boxBall, HitBox boxWall) {
                 if(boxWall.getName().equals("BOT")) {
                     ball.removeFromWorld();
-                    if(hw2.dropBall() > 0) {
-                        ball = newBall(getWidth() * 0.5, getHeight() * 0.8);
-                        getGameWorld().addEntity(ball);
-                    }
+                    if(hw2.dropBall() > 0)
+                        spawnBall();
                     else {
                         FXGL.getNotificationService().pushNotification("GAME OVER");
                         getGameWorld()
@@ -112,6 +116,9 @@ public class GameApp extends GameApplication {
                     }
                     getGameState().setValue("lives", hw2.getBallsLeft());
                 }
+                else{
+                    ball.getComponent(BallControl.class).onHit();
+                }
             }
         });
 
@@ -119,6 +126,17 @@ public class GameApp extends GameApplication {
             @Override
             protected void onHitBoxTrigger(Entity brick, Entity ball, HitBox boxBrick, HitBox boxBall) {
                 BrickControl brickControl = brick.getComponent(BrickControl.class);
+
+                ball.getComponent(BallControl.class).onHit();
+
+                if(brickControl.isGlassBrick())
+                    getAudioPlayer().playSound("hitGlass.mp3"); //Cortar
+                /*else{
+                    if(brickControl.isWoodenBrick())
+                        getAudioPlayer().playSound("hitGlass.mp3"); //hitWood
+                    else
+                        getAudioPlayer().playSound("hitGlass.mp3"); //hitMetal
+                }*/
 
                 boolean newLevel = false;
                 if(hw2.getCurrentLevelPoints() + brickControl.getScore() == hw2.getLevelPoints())
@@ -132,6 +150,8 @@ public class GameApp extends GameApplication {
                     getGameState().setValue("lives", hw2.getBallsLeft());
 
                 if(newLevel) {
+                    getGameWorld().clear();
+                    placeEntities();
                     getGameState().setValue("name", hw2.getLevelName());
                     getGameState().increment("levelsPlayed", 1);
                     getGameState().increment("remainingLevels", -1);
@@ -219,6 +239,28 @@ public class GameApp extends GameApplication {
         getGameScene().addUINode(levelScore);
         getGameScene().addUINode(scoreT);
         getGameScene().addUINode(score);
+    }
+
+    private void spawnBall(){
+        final Entity[] bar = new Entity[1];
+        getGameWorld().getEntitiesByType(Types.PLAYER).forEach(p -> bar[0] = p);
+        Entity ball = newBall(bar[0].getX(), bar[0].getY());
+        getGameWorld().addEntity(ball);
+    }
+
+    private void placeEntities(){
+        Entity background = newBackground();
+        Entity walls = newWalls();
+        Entity bar = newBar(getWidth() * 0.5, getHeight() * 0.9);
+        Entity ball = newBall(bar.getX(), bar.getY());
+
+        getGameWorld().addEntities(background, walls, bar, ball);
+
+        PositionHandler ph = new PositionHandler(getWidth(), getHeight());
+        hw2.getBricks().forEach(brick -> {
+            int[] p = ph.getPosition();
+            getGameWorld().addEntity(newBrick(p[0], p[1], brick));
+        });
     }
 
     public static void main(String[] args) {
